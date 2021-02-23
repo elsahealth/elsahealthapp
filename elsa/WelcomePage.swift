@@ -7,8 +7,8 @@
 
 import SwiftUI
 
-struct WelcomePage : View {
+struct WelcomePage: View {
     var body: some View {
-        var blank = ""
+        Text("Welcome Page")
     }
 }

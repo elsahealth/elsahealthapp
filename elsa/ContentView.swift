@@ -19,7 +19,7 @@ struct ContentView: View {
                     .foregroundColor(/*@START_MENU_TOKEN@*/.gray/*@END_MENU_TOKEN@*/)
                     .multilineTextAlignment(.center)
                     //.font(Font.custom("hirakakustd-w8", size: 20))
-                NavigationLink(destination: ContentView2()) {
+                NavigationLink(destination: LoginView()) {
                     Text("SIGN UP")
                         .fontWeight(.semibold)
                         //.font(Font.custom("hirakakustd-w8", size: 8))
