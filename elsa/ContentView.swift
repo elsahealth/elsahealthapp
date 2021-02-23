@@ -34,7 +34,7 @@ struct ContentView: View {
                 HStack {
                     Text("Already have an account?")
                         //.font(.custom("hirakakustd-w8"))
-                    NavigationLink(destination: ContentView3()) {
+                    NavigationLink(destination: LoginView()) {
                         Text("Log in")
                             //.font(.custom("hirakakustd-w8"))
                     }
