@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F075553825E4BE2100BAE510 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F075553725E4BE2100BAE510 /* LoginView.swift */; };
 		F075553C25E4BE5900BAE510 /* WelcomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F075553B25E4BE5800BAE510 /* WelcomePage.swift */; };
+		F075553F25E4BF0900BAE510 /* LoginPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F075553E25E4BF0900BAE510 /* LoginPage.swift */; };
 		F0B4207925E1E6C600B1BECA /* elsaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B4207825E1E6C600B1BECA /* elsaApp.swift */; };
 		F0B4207B25E1E6C600B1BECA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B4207A25E1E6C600B1BECA /* ContentView.swift */; };
 		F0B4207D25E1E6C900B1BECA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F0B4207C25E1E6C900B1BECA /* Assets.xcassets */; };
@@ -18,8 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		F075553725E4BE2100BAE510 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginView.swift; path = ../LoginView.swift; sourceTree = "<group>"; };
 		F075553B25E4BE5800BAE510 /* WelcomePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomePage.swift; sourceTree = "<group>"; };
+		F075553E25E4BF0900BAE510 /* LoginPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPage.swift; sourceTree = "<group>"; };
 		F0B4207525E1E6C600B1BECA /* elsa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = elsa.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0B4207825E1E6C600B1BECA /* elsaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = elsaApp.swift; sourceTree = "<group>"; };
 		F0B4207A25E1E6C600B1BECA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -62,13 +62,13 @@
 			isa = PBXGroup;
 			children = (
 				F0B4207825E1E6C600B1BECA /* elsaApp.swift */,
-				F075553725E4BE2100BAE510 /* LoginView.swift */,
 				F075553B25E4BE5800BAE510 /* WelcomePage.swift */,
 				F0B4207A25E1E6C600B1BECA /* ContentView.swift */,
 				F0B4208825E1E72700B1BECA /* ContentView2.swift */,
 				F0B4207C25E1E6C900B1BECA /* Assets.xcassets */,
 				F0B4208125E1E6C900B1BECA /* Info.plist */,
 				F0B4207E25E1E6C900B1BECA /* Preview Content */,
+				F075553E25E4BF0900BAE510 /* LoginPage.swift */,
 			);
 			path = elsa;
 			sourceTree = "<group>";
@@ -151,10 +151,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F075553F25E4BF0900BAE510 /* LoginPage.swift in Sources */,
 				F075553C25E4BE5900BAE510 /* WelcomePage.swift in Sources */,
 				F0B4208925E1E72700B1BECA /* ContentView2.swift in Sources */,
 				F0B4207B25E1E6C600B1BECA /* ContentView.swift in Sources */,
-				F075553825E4BE2100BAE510 /* LoginView.swift in Sources */,
 				F0B4207925E1E6C600B1BECA /* elsaApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
