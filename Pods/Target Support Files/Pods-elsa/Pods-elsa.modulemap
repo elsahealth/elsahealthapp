@@ -1,0 +1,6 @@
+framework module Pods_elsa {
+  umbrella header "Pods-elsa-umbrella.h"
+
+  export *
+  module * { export * }
+}

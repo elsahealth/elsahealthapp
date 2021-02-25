@@ -6,74 +6,78 @@
 //
 
 import SwiftUI
+import Firebase
 
 struct LoginView : View {
-    @State var colour = Color.black.opacity(0.7)
-    @State var email = ""
-    @State var password = ""
-    @State var visible = false
+    @ObservedObject var model = ModelData()
+    
     var body : some View {
         VStack {
-            Text("Log in to your account")
-                .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
-            
-            TextField("Email", text: self.$email)
-            .padding()
-                .background(RoundedRectangle(cornerRadius: 4).stroke(self.email != "" ? Color.blue : self.colour, lineWidth: 2))
-                .disableAutocorrection(true)
-            
-            HStack(spacing: 15) {
-                VStack { //TODO: why is this vstack needed
-                    if self.visible {
-                        TextField("Password", text: self.$password)
-                    } else {
-                        SecureField("Password", text: self.$password)
-                    }
-                    
-                }
-                Button(action: {
-                    self.visible = true //TODO: make this alternate
-                }) {
-                    Image(systemName: self.visible ? "eye.slash.fill" : "eye.fill")
-                        .foregroundColor(self.colour)
-                }
+            Text("Welcome Back")
+                .font(.title)
+                .fontWeight(.bold)
+            VStack {
+                Text("placeholder for alternate login in methods")
             }
-            .padding()
-            .background(RoundedRectangle(cornerRadius: 4).stroke(self.password != "" ? Color.blue : self.colour, lineWidth: 2))
+            .padding(.top)
             
-            NavigationLink(destination: WelcomePage()) {
+            VStack(spacing: 20) {
+                
+                CustomTextField(placeHolder: "Email", txt: $model.email)
+                
+                HStack {
+                    CustomTextField(placeHolder: "Password", txt: $model.password)
+                    //Image(systemName: <#T##String#>)
+                    // TODO: add the eye pic so that we can view the password
+                    // on both this view and the sign up one
+                }
+                
+            }
+            .padding(.top)
+            
+            Button(action: model.login) {
                 Text("LOG IN")
-                    .fontWeight(.semibold)
-                    .padding()
-                    .frame(minWidth: 0, maxWidth: .infinity)
-                    .background(Color("elsaBlue2"))
+                    .fontWeight(.bold)
                     .foregroundColor(.white)
-                    .cornerRadius(40)
-                    .padding(.horizontal, 20)
+                    .padding(.vertical)
+                    .frame(width: UIScreen.main.bounds.width - 30)
+                    .background(Color("elsaBlue1"))
+                    .clipShape(Capsule())
             }
+            .padding(.top, 22)
+            
+            
+            Button(action: model.resetPassword){
+                Text("Forgot Password?")
+                    .fontWeight(.bold)
+                
+            }
+            
+            Spacer()
+            Spacer()
             
             HStack {
-                Button(action: {
-                    
-                }) {
-                    Text("Forgot Password?")
-                }
-                .padding(.top, 20)
+                Text("ALREADY HAVE AN ACCOUNT?")
+                
+                Button(action: {model.isSignedUp.toggle()}, label: {
+                    Text("SIGN UP")
+                        .fontWeight(.bold)
+                })
             }
-            
+            Spacer()
         }
-        .padding(.horizontal, 25)
-        
-        
-        
+        .fullScreenCover(isPresented: $model.isSignedUp) {
+            SignUp()
+        }
+        .alert(isPresented: $model.isLinkEmailSent) {
+            Alert(title: Text("Message"), message: Text("The password reset link has been sent"), dismissButton: .destructive(Text("Ok")))
+            //TODO: add a check to see if this is a valid address
+        }
     }
 }
-
-
 
 struct LoginView_Previews: PreviewProvider {
     static var previews: some View {
         LoginView()
     }
 }
-

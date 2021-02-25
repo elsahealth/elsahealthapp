@@ -1,4 +1,4 @@
-//
+ //
 //  ContentView.swift
 //  elsa
 //
@@ -6,8 +6,11 @@
 //
 
 import SwiftUI
+import Firebase
 
 struct ContentView: View {
+    @AppStorage("log_status") var status = false
+    
     var body: some View {
         NavigationView {
             VStack {
@@ -19,7 +22,7 @@ struct ContentView: View {
                     .foregroundColor(/*@START_MENU_TOKEN@*/.gray/*@END_MENU_TOKEN@*/)
                     .multilineTextAlignment(.center)
                     //.font(Font.custom("hirakakustd-w8", size: 20))
-                NavigationLink(destination: LoginView()) {
+                NavigationLink(destination: SignUp()) {
                     Text("SIGN UP")
                         .fontWeight(.semibold)
                         //.font(Font.custom("hirakakustd-w8", size: 8))
@@ -29,19 +32,26 @@ struct ContentView: View {
                         .foregroundColor(.white)
                         .cornerRadius(40)
                         .padding(.horizontal, 20)
+                Spacer()
                 }
             
                 HStack {
                     Text("Already have an account?")
                         //.font(.custom("hirakakustd-w8"))
-                    NavigationLink(destination: LoginView()) {
-                        Text("Log in")
-                            //.font(.custom("hirakakustd-w8"))
+                    ZStack {
+//                        if status {
+//                            VStack(spacing: 25) {
+//                                Text("Logged in as \(Auth.auth().currentUser?.email ?? "")")
+//                                
+//                            }
+//                        }
+                        NavigationLink(destination: LoginView()) {
+                            Text("Log in")
+                                //.font(.custom("hirakakustd-w8"))
+                    }
+
                     }
                 }
-                
-                
-                
             }
         }
     }
