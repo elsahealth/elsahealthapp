@@ -8,9 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		0D418009363A9EEC3099F9D8 /* Pods_elsa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24E95A61A6B789B2219BD2FA /* Pods_elsa.framework */; };
-		F036A7BA25E5E59A0036D0C5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F036A7B925E5E59A0036D0C5 /* GoogleService-Info.plist */; };
 		F036A7BE25E6029D0036D0C5 /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F036A7BD25E6029D0036D0C5 /* ModelData.swift */; };
 		F036A7C125E6034C0036D0C5 /* LoginSignUpHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F036A7C025E6034C0036D0C5 /* LoginSignUpHelper.swift */; };
+		F036A7C425E9E0880036D0C5 /* GoogleService-Info 16.31.17.plist in Resources */ = {isa = PBXBuildFile; fileRef = F036A7C325E9E0880036D0C5 /* GoogleService-Info 16.31.17.plist */; };
+		F036A7CB25E9F2A90036D0C5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F036A7CA25E9F2A90036D0C5 /* GoogleService-Info.plist */; };
 		F075553C25E4BE5900BAE510 /* WelcomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F075553B25E4BE5800BAE510 /* WelcomePage.swift */; };
 		F075553F25E4BF0900BAE510 /* LoginPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F075553E25E4BF0900BAE510 /* LoginPage.swift */; };
 		F0B4207925E1E6C600B1BECA /* elsaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B4207825E1E6C600B1BECA /* elsaApp.swift */; };
@@ -25,9 +26,10 @@
 		24E95A61A6B789B2219BD2FA /* Pods_elsa.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_elsa.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		378B29DC0BE46FA49EC962A3 /* Pods-elsa.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-elsa.release.xcconfig"; path = "Target Support Files/Pods-elsa/Pods-elsa.release.xcconfig"; sourceTree = "<group>"; };
 		642EC8635D20D46180E308DE /* Pods-elsa.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-elsa.debug.xcconfig"; path = "Target Support Files/Pods-elsa/Pods-elsa.debug.xcconfig"; sourceTree = "<group>"; };
-		F036A7B925E5E59A0036D0C5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Desktop/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F036A7BD25E6029D0036D0C5 /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
 		F036A7C025E6034C0036D0C5 /* LoginSignUpHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginSignUpHelper.swift; sourceTree = "<group>"; };
+		F036A7C325E9E0880036D0C5 /* GoogleService-Info 16.31.17.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info 16.31.17.plist"; sourceTree = "<group>"; };
+		F036A7CA25E9F2A90036D0C5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F075553B25E4BE5800BAE510 /* WelcomePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomePage.swift; sourceTree = "<group>"; };
 		F075553E25E4BF0900BAE510 /* LoginPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPage.swift; sourceTree = "<group>"; };
 		F0B4207525E1E6C600B1BECA /* elsa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = elsa.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -96,12 +98,12 @@
 				F0B4208825E1E72700B1BECA /* SignUp.swift */,
 				F036A7C025E6034C0036D0C5 /* LoginSignUpHelper.swift */,
 				F036A7BD25E6029D0036D0C5 /* ModelData.swift */,
+				F036A7CA25E9F2A90036D0C5 /* GoogleService-Info.plist */,
 				F075553E25E4BF0900BAE510 /* LoginPage.swift */,
 				F075553B25E4BE5800BAE510 /* WelcomePage.swift */,
 				F0B4207C25E1E6C900B1BECA /* Assets.xcassets */,
 				F0B4208125E1E6C900B1BECA /* Info.plist */,
 				F0B4207E25E1E6C900B1BECA /* Preview Content */,
-				F036A7B925E5E59A0036D0C5 /* GoogleService-Info.plist */,
 			);
 			path = elsa;
 			sourceTree = "<group>";
@@ -109,6 +111,7 @@
 		F0B4207E25E1E6C900B1BECA /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
+				F036A7C325E9E0880036D0C5 /* GoogleService-Info 16.31.17.plist */,
 				F0B4207F25E1E6C900B1BECA /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
@@ -174,9 +177,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				F0B4209725E1E90C00B1BECA /* .gitignore in Resources */,
-				F036A7BA25E5E59A0036D0C5 /* GoogleService-Info.plist in Resources */,
 				F0B4208025E1E6C900B1BECA /* Preview Assets.xcassets in Resources */,
+				F036A7CB25E9F2A90036D0C5 /* GoogleService-Info.plist in Resources */,
 				F0B4207D25E1E6C900B1BECA /* Assets.xcassets in Resources */,
+				F036A7C425E9E0880036D0C5 /* GoogleService-Info 16.31.17.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

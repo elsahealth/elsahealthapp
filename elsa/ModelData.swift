@@ -14,6 +14,7 @@ class ModelData : ObservableObject {
     @Published var email = ""
     @Published var password = ""
     @Published var isSignedUp = false
+    @Published var isLoggedin = false
     @Published var emailSignUp = ""
     @Published var passwordSignUp = ""
     @Published var passwordReEnter = ""
@@ -70,10 +71,12 @@ class ModelData : ObservableObject {
                 try! Auth.auth().signOut()
                 return
             }
+            // if we get to here, means that the user is logged in and email has been verified
+            self.isLoggedin.toggle()
             
-            withAnimation {
-                self.status = true
-            }
+//            withAnimation {
+//                self.status = true
+//            }
         }
     }
     

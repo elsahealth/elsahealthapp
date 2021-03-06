@@ -32,8 +32,9 @@ struct ContentView: View {
                         .foregroundColor(.white)
                         .cornerRadius(40)
                         .padding(.horizontal, 20)
-                Spacer()
+                
                 }
+                
             
                 HStack {
                     Text("Already have an account?")
@@ -48,7 +49,7 @@ struct ContentView: View {
                         NavigationLink(destination: LoginView()) {
                             Text("Log in")
                                 //.font(.custom("hirakakustd-w8"))
-                    }
+                        }
 
                     }
                 }

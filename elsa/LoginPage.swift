@@ -35,7 +35,12 @@ struct LoginView : View {
             }
             .padding(.top)
             
-            Button(action: model.login) {
+            //TODO: add loading screen
+            NavigationLink(destination: WelcomePage(), isActive: $model.isLoggedin) {
+                EmptyView() }
+            Button {
+                model.login()
+            } label: {
                 Text("LOG IN")
                     .fontWeight(.bold)
                     .foregroundColor(.white)
@@ -43,6 +48,9 @@ struct LoginView : View {
                     .frame(width: UIScreen.main.bounds.width - 30)
                     .background(Color("elsaBlue1"))
                     .clipShape(Capsule())
+            }
+            .alert(isPresented: $model.alert) {
+                Alert(title: Text("Message"), message: Text("Please input the fields properly"), dismissButton: .destructive(Text("Ok")))
             }
             .padding(.top, 22)
             
@@ -55,15 +63,15 @@ struct LoginView : View {
             
             Spacer()
             Spacer()
-            
-            HStack {
-                Text("ALREADY HAVE AN ACCOUNT?")
-                
-                Button(action: {model.isSignedUp.toggle()}, label: {
-                    Text("SIGN UP")
-                        .fontWeight(.bold)
-                })
-            }
+            // should be placed in the sign up view
+//            HStack {
+//                Text("ALREADY HAVE AN ACCOUNT?")
+//
+//                Button(action: {model.isSignedUp.toggle()}, label: {
+//                    Text("LOG IN")
+//                        .fontWeight(.bold)
+//                })
+//            }
             Spacer()
         }
         .fullScreenCover(isPresented: $model.isSignedUp) {

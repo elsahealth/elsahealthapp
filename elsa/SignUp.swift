@@ -17,40 +17,42 @@ import SwiftUI
 
 struct SignUp: View {
     @ObservedObject var model = ModelData() //check if I am fucking anything up here with loginpage
-    //@State var testing : Bool = false
     
     var body : some View {
-        NavigationView {
-            ZStack {
-                VStack {
-                    //Spacer()
+        ZStack {
+            VStack {
+                //Spacer()
+                Text("Create your account")
+                    .font(.title)
+                    .fontWeight(.bold)
+
+                Text("placeholder for alternate login in methods")
+
+                //.padding(.top)
+                
+                Text("OR LOG IN WITH EMAIL")
+                
+                VStack() {
+                    CustomTextField(placeHolder: "Email", txt: $model.emailSignUp)
                     
-                    Text("Create your account")
-                        .font(.title)
-                        .fontWeight(.bold)
-                    VStack {
-                        Text("placeholder for alternate login in methods")
-                    }
-                    //.padding(.top)
+                    CustomTextField(placeHolder: "Password", txt: $model.passwordSignUp)
                     
-                    Text("OR LOG IN WITH EMAIL")
-                    
-                    VStack(spacing: 20) {
-                        CustomTextField(placeHolder: "Email", txt: $model.emailSignUp)
-                        
-                        CustomTextField(placeHolder: "Password", txt: $model.passwordSignUp)
-                        
-                        CustomTextField(placeHolder: "Re-Enter Password", txt: $model.passwordReEnter)
-                    }
-                    .padding(.top)
-                    
-                    HStack {
-                        Text("I have read the pp placeholder")
-                        // TODO: add checkbox and link to the Privacy policy
-                    }
-                    NavigationLink(destination: WelcomePage(), isActive: $model.isSignedUp) {
-                        EmptyView()
-                    }
+                    CustomTextField(placeHolder: "Re-Enter Password", txt: $model.passwordReEnter)
+                }
+                //.padding(.top)
+                
+                HStack {
+                    Text("I have read the pp placeholder")
+                    // TODO: add checkbox and link to the Privacy policy
+                }
+                /* figure out what to do here. once we select "SIGN UP" we go right to
+                the next view. maybe when signing up, we have the log in view pop up instead?
+                */
+                NavigationLink(destination: LoginView(), isActive: $model.isSignedUp) {
+                    EmptyView() }
+                Button {
+                    model.signUp()
+                } label: {
                     Text("GET STARTED")
                         .fontWeight(.bold)
                         .foregroundColor(.white)
@@ -58,49 +60,24 @@ struct SignUp: View {
                         .frame(width: UIScreen.main.bounds.width - 30)
                         .background(Color("elsaBlue1"))
                         .clipShape(Capsule())
-                        .onTapGesture {
-                            model.signUp()
-                        }
-                    Spacer() // TODO: why minLength
                 }
-//                Button(action: model.signUp) {
-//                    Text("GET STARTED")
-//                        .fontWeight(.bold)
-//                        .foregroundColor(.white)
-//                        .padding(.vertical)
-//                        .frame(width: UIScreen.main.bounds.width - 30)
-//                        .background(Color("elsaBlue1"))
-//                        .clipShape(Capsule())
-//                }
-//                .padding(.top, 10)
-                
-                
-            
-            
-//            Button(action: {
-//                    model.isSignedUp.toggle()
-//            }) {
-//                Image(systemName: "xmark")
-//                    .foregroundColor(.white)
-//                    .padding()
-//                    .background(Color.black.opacity(0.6))
-//                    .clipShape(Circle())
-//            }
-//            .padding(.trailing)
-//            .padding(.top, 10)
+                Spacer()
             }
-            .alert(isPresented: $model.alert, content: {
-                Alert(title: Text("Message"), message: Text(model.alertMsg), dismissButton: .destructive(Text("Ok"), action: {
-                    
-                    if model.alertMsg == "Please verify your email. Once you recieve and email from us, please click on the link to verify" {
-                        model.isSignedUp.toggle()
-                        model.emailSignUp = ""
-                        model.passwordSignUp = ""
-                        model.passwordReEnter = ""
-                    }
-                }))
-            })
+            .navigationBarTitle("", displayMode: .inline)
+            //.navigationBarHidden(true)
         }
+        .alert(isPresented: $model.alert, content: {
+            Alert(title: Text("Message"), message: Text(model.alertMsg), dismissButton: .destructive(Text("Ok"), action: {
+                
+                //this is also displayed
+                if model.alertMsg == "Please verify your email. Once verified, log into your account" {
+                    model.isSignedUp.toggle()
+                    model.emailSignUp = ""
+                    model.passwordSignUp = ""
+                    model.passwordReEnter = ""
+                }
+            }))
+        })
     }
 }
 
@@ -108,6 +85,6 @@ struct SignUp: View {
 
 struct SignUp_Previews: PreviewProvider {
     static var previews: some View {
-        SignUp() //check this later
+        SignUp()
     }
 }
