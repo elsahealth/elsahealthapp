@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0D418009363A9EEC3099F9D8 /* Pods_elsa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24E95A61A6B789B2219BD2FA /* Pods_elsa.framework */; };
+		F015B6D725F33F4E00B20774 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = F015B6D625F33F4E00B20774 /* Home.swift */; };
 		F036A7BE25E6029D0036D0C5 /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F036A7BD25E6029D0036D0C5 /* ModelData.swift */; };
 		F036A7C125E6034C0036D0C5 /* LoginSignUpHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F036A7C025E6034C0036D0C5 /* LoginSignUpHelper.swift */; };
 		F036A7C425E9E0880036D0C5 /* GoogleService-Info 16.31.17.plist in Resources */ = {isa = PBXBuildFile; fileRef = F036A7C325E9E0880036D0C5 /* GoogleService-Info 16.31.17.plist */; };
@@ -26,6 +27,7 @@
 		24E95A61A6B789B2219BD2FA /* Pods_elsa.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_elsa.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		378B29DC0BE46FA49EC962A3 /* Pods-elsa.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-elsa.release.xcconfig"; path = "Target Support Files/Pods-elsa/Pods-elsa.release.xcconfig"; sourceTree = "<group>"; };
 		642EC8635D20D46180E308DE /* Pods-elsa.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-elsa.debug.xcconfig"; path = "Target Support Files/Pods-elsa/Pods-elsa.debug.xcconfig"; sourceTree = "<group>"; };
+		F015B6D625F33F4E00B20774 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		F036A7BD25E6029D0036D0C5 /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
 		F036A7C025E6034C0036D0C5 /* LoginSignUpHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginSignUpHelper.swift; sourceTree = "<group>"; };
 		F036A7C325E9E0880036D0C5 /* GoogleService-Info 16.31.17.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info 16.31.17.plist"; sourceTree = "<group>"; };
@@ -101,6 +103,7 @@
 				F036A7CA25E9F2A90036D0C5 /* GoogleService-Info.plist */,
 				F075553E25E4BF0900BAE510 /* LoginPage.swift */,
 				F075553B25E4BE5800BAE510 /* WelcomePage.swift */,
+				F015B6D625F33F4E00B20774 /* Home.swift */,
 				F0B4207C25E1E6C900B1BECA /* Assets.xcassets */,
 				F0B4208125E1E6C900B1BECA /* Info.plist */,
 				F0B4207E25E1E6C900B1BECA /* Preview Content */,
@@ -239,6 +242,7 @@
 				F0B4208925E1E72700B1BECA /* SignUp.swift in Sources */,
 				F0B4207B25E1E6C600B1BECA /* ContentView.swift in Sources */,
 				F0B4207925E1E6C600B1BECA /* elsaApp.swift in Sources */,
+				F015B6D725F33F4E00B20774 /* Home.swift in Sources */,
 				F036A7BE25E6029D0036D0C5 /* ModelData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
