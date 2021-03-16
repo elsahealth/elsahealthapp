@@ -22,7 +22,7 @@ struct WelcomePage: View {
                     GeometryReader { geo in
                         Image("Ellipse 13")
                             .resizable()
-                            .aspectRatio(contentMode: .fit)
+                            .aspectRatio(contentMode: .fill)
                             .frame(width: geo.size.width)
                         // blue shape
                         Image("path18")
@@ -32,7 +32,7 @@ struct WelcomePage: View {
                         //right lighter blue shape
                         Image("path20")
                             .resizable()
-                            .aspectRatio(contentMode: .fit)
+                            .aspectRatio(contentMode: .fill)
                             .frame(width: geo.size.width)
                         // beige shape
                         Image("path22")
@@ -40,13 +40,13 @@ struct WelcomePage: View {
                             .aspectRatio(contentMode: .fit)
                             .frame(width: geo.size.width + 50, height: geo.size.height)
                         // the girl
-                        Image("icon egirl 1")
+                        Image("welcome_egirl")
                             .resizable()
                             .aspectRatio(contentMode: .fit)
                             .frame(width: geo.size.width, height: geo.size.height, alignment: .center)
                     }
                 }
-                NavigationLink(destination: Home()) {
+                NavigationLink(destination: HomePage()) {
                     Text("GET STARTED")
                         .fontWeight(.bold)
                         .foregroundColor(.white)
@@ -58,6 +58,7 @@ struct WelcomePage: View {
             }
         }
         .navigationBarTitle("", displayMode: .inline)
+        .navigationBarHidden(true)
     }
 }
 

@@ -46,7 +46,7 @@ struct ContentView: View {
 //                                
 //                            }
 //                        }
-                        NavigationLink(destination: LoginView()) {
+                        NavigationLink(destination: WelcomePage()) {
                             Text("Log in")
                                 //.font(.custom("hirakakustd-w8"))
                         }
