@@ -10,45 +10,64 @@ import SwiftUI
 struct HomePage: View {
     var body: some View {
         VStack {
-            // insert profile button on the top right corner
+            // TODO: insert profile button on the top right corner
             // figure out how to change the name
             Text("Good morning, Emy")
             Text("How can elsa help you today?")
             HStack {
-                VStack {
-                    Text("Prescription")
-                    ZStack {
-                        RoundedRectangle(cornerRadius: 25)
-                            .fill(Color("elsaYellow1"))
-                            .frame(width: UIScreen.main.bounds.width / 2, height: UIScreen.main.bounds.height / 3)
+                ZStack {
+                    RoundedRectangle(cornerRadius: 25)
+                        .fill(Color("elsaYellow1"))
+                        .frame(width: UIScreen.main.bounds.width / 2, height: UIScreen.main.bounds.height / 2)
+                    VStack {
+                        Text("Prescription")
                         Image("home_prescription")
                             //.resizable()
-                            .frame(width: UIScreen.main.bounds.width / 2, height: UIScreen.main.bounds.height / 3)
-                    }
-                    Text("Fill our survey")
-                        .font(.caption2)
-                    Text("Get validated by an MD")
-                        .font(.caption2)
-                    Text("Dialogue with an MD")
-                        .font(.caption2)
+//                            .frame(width: UIScreen.main.bounds.width / 2, height: UIScreen.main.bounds.height / 3)
                     
-                    // button to go to new view
-                }
-                VStack {
-                    Text("Delivery")
-                    ZStack {
-                        RoundedRectangle(cornerRadius: 25)
-                            .fill(Color("elsaYellow2"))
-                            .frame(width: UIScreen.main.bounds.width / 2, height: UIScreen.main.bounds.height / 3)
-                        Image("home_delivery")
-                            .frame(width: UIScreen.main.bounds.width / 2, height: UIScreen.main.bounds.height / 3)
+                        Text("Fill our survey")
+                            .font(.caption2)
+                        Text("Get validated by an MD")
+                            .font(.caption2)
+                        Text("Dialogue with an MD")
+                            .font(.caption2)
+                        NavigationLink(
+                            destination: PrescriptionView(),
+                            label: {
+                                Text("Start")
+                                    .padding(/*@START_MENU_TOKEN@*/.all, 5.0/*@END_MENU_TOKEN@*/)
+                                    .background(Color("elsaBlue2"))
+                                    .foregroundColor(.white)
+                                    .cornerRadius(10)
+                            })
                     }
-                    Text("Choose your delivery method")
-                        .font(.caption2)
-                        //.lineLimit(nil)
-                    //TODO: Fix how it gets cut off
-                    Text("Track delivery status")
-                        .font(.caption2)
+                }
+                ZStack {
+                    RoundedRectangle(cornerRadius: 25)
+                        .fill(Color("elsaYellow2"))
+                        .frame(width: UIScreen.main.bounds.width / 2, height: UIScreen.main.bounds.height / 2)
+                    VStack {
+                        Text("Delivery")
+                        Image("home_delivery")
+//                            .frame(width: UIScreen.main.bounds.width / 2, height: UIScreen.main.bounds.height / 3)
+    
+                        Text("Choose your delivery method")
+                            .font(.caption2)
+                        //TODO: Fix how it gets cut off
+                        Text("Track delivery status")
+                            .font(.caption2)
+                        NavigationLink(
+                            destination: PrescriptionView(),
+                            label: {
+                                Text("Start")
+                                    .padding(.vertical, 2.0)
+                                    .frame(minWidth: 0, maxWidth: UIScreen.main.bounds.width / 4)
+                                    .background(Color("elsaBlue2"))
+                                    .foregroundColor(.white)
+                                    .cornerRadius(10)
+                        })
+                    }
+                    //TODO: make the start buttons in line with each other
                 }
             }
             Spacer()
@@ -87,6 +106,10 @@ struct HomePage: View {
 
 struct HomePage_Previews: PreviewProvider {
     static var previews: some View {
-        HomePage()
+        Group {
+            HomePage()
+            HomePage()
+            HomePage()
+        }
     }
 }

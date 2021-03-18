@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		0D418009363A9EEC3099F9D8 /* Pods_elsa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24E95A61A6B789B2219BD2FA /* Pods_elsa.framework */; };
 		F015B6D725F33F4E00B20774 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = F015B6D625F33F4E00B20774 /* Home.swift */; };
+		F02D00042602AF0000249A38 /* PrescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02D00032602AF0000249A38 /* PrescriptionView.swift */; };
+		F02D00072602B03D00249A38 /* DeliveryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02D00062602B03D00249A38 /* DeliveryView.swift */; };
+		F02D000A2602BAD600249A38 /* PrescriptionViewYesPreScan.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02D00092602BAD600249A38 /* PrescriptionViewYesPreScan.swift */; };
+		F02D000D2602BB7D00249A38 /* PrescriptionViewNoSurvey.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02D000C2602BB7D00249A38 /* PrescriptionViewNoSurvey.swift */; };
+		F02D00142602BD3F00249A38 /* PrescriptionViewYesScan.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02D00132602BD3F00249A38 /* PrescriptionViewYesScan.swift */; };
 		F036A7BE25E6029D0036D0C5 /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F036A7BD25E6029D0036D0C5 /* ModelData.swift */; };
 		F036A7C125E6034C0036D0C5 /* LoginSignUpHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F036A7C025E6034C0036D0C5 /* LoginSignUpHelper.swift */; };
 		F036A7C425E9E0880036D0C5 /* GoogleService-Info 16.31.17.plist in Resources */ = {isa = PBXBuildFile; fileRef = F036A7C325E9E0880036D0C5 /* GoogleService-Info 16.31.17.plist */; };
@@ -29,6 +34,11 @@
 		378B29DC0BE46FA49EC962A3 /* Pods-elsa.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-elsa.release.xcconfig"; path = "Target Support Files/Pods-elsa/Pods-elsa.release.xcconfig"; sourceTree = "<group>"; };
 		642EC8635D20D46180E308DE /* Pods-elsa.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-elsa.debug.xcconfig"; path = "Target Support Files/Pods-elsa/Pods-elsa.debug.xcconfig"; sourceTree = "<group>"; };
 		F015B6D625F33F4E00B20774 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		F02D00032602AF0000249A38 /* PrescriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrescriptionView.swift; sourceTree = "<group>"; };
+		F02D00062602B03D00249A38 /* DeliveryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryView.swift; sourceTree = "<group>"; };
+		F02D00092602BAD600249A38 /* PrescriptionViewYesPreScan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrescriptionViewYesPreScan.swift; sourceTree = "<group>"; };
+		F02D000C2602BB7D00249A38 /* PrescriptionViewNoSurvey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrescriptionViewNoSurvey.swift; sourceTree = "<group>"; };
+		F02D00132602BD3F00249A38 /* PrescriptionViewYesScan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrescriptionViewYesScan.swift; sourceTree = "<group>"; };
 		F036A7BD25E6029D0036D0C5 /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
 		F036A7C025E6034C0036D0C5 /* LoginSignUpHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginSignUpHelper.swift; sourceTree = "<group>"; };
 		F036A7C325E9E0880036D0C5 /* GoogleService-Info 16.31.17.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info 16.31.17.plist"; sourceTree = "<group>"; };
@@ -106,6 +116,11 @@
 				F075553E25E4BF0900BAE510 /* LoginPage.swift */,
 				F075553B25E4BE5800BAE510 /* WelcomePage.swift */,
 				F015B6D625F33F4E00B20774 /* Home.swift */,
+				F02D00062602B03D00249A38 /* DeliveryView.swift */,
+				F02D00032602AF0000249A38 /* PrescriptionView.swift */,
+				F02D000C2602BB7D00249A38 /* PrescriptionViewNoSurvey.swift */,
+				F02D00092602BAD600249A38 /* PrescriptionViewYesPreScan.swift */,
+				F02D00132602BD3F00249A38 /* PrescriptionViewYesScan.swift */,
 				F06465DD260042A70014A60E /* PillReminder.swift */,
 				F0B4207C25E1E6C900B1BECA /* Assets.xcassets */,
 				F0B4208125E1E6C900B1BECA /* Info.plist */,
@@ -135,6 +150,7 @@
 				F0B4207225E1E6C600B1BECA /* Frameworks */,
 				F0B4207325E1E6C600B1BECA /* Resources */,
 				927EF249B0DF1C268C462DB8 /* [CP] Embed Pods Frameworks */,
+				F02D001626038CF100249A38 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -232,6 +248,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		F02D001626038CF100249A38 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nTAGS=\"TODO:|FIXME:\"\nERRORTAG=\"ERROR:\"\nfind \"${SRCROOT}\" \\( -name \"*.h\" -or -name \"*.m\" -or -name \"*.swift\" \\) -print0 | xargs -0 egrep --with-filename --line-number --only-matching \"($TAGS).*\\$|($ERRORTAG).*\\$\" | perl -p -e \"s/($TAGS)/ warning: \\$1/\" | perl -p -e \"s/($ERRORTAG)/ error: \\$1/\"\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -243,10 +276,15 @@
 				F075553F25E4BF0900BAE510 /* LoginPage.swift in Sources */,
 				F075553C25E4BE5900BAE510 /* WelcomePage.swift in Sources */,
 				F0B4208925E1E72700B1BECA /* SignUp.swift in Sources */,
+				F02D00042602AF0000249A38 /* PrescriptionView.swift in Sources */,
 				F0B4207B25E1E6C600B1BECA /* ContentView.swift in Sources */,
+				F02D00072602B03D00249A38 /* DeliveryView.swift in Sources */,
 				F06465DE260042A70014A60E /* PillReminder.swift in Sources */,
 				F0B4207925E1E6C600B1BECA /* elsaApp.swift in Sources */,
 				F015B6D725F33F4E00B20774 /* Home.swift in Sources */,
+				F02D000A2602BAD600249A38 /* PrescriptionViewYesPreScan.swift in Sources */,
+				F02D00142602BD3F00249A38 /* PrescriptionViewYesScan.swift in Sources */,
+				F02D000D2602BB7D00249A38 /* PrescriptionViewNoSurvey.swift in Sources */,
 				F036A7BE25E6029D0036D0C5 /* ModelData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

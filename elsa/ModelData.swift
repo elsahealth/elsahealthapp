@@ -11,6 +11,7 @@ import SwiftUI
 import Firebase
 
 class ModelData : ObservableObject {
+    //TODO: make this into an enum
     @Published var email = ""
     @Published var password = ""
     @Published var isSignedUp = false
