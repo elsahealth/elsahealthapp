@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0D418009363A9EEC3099F9D8 /* Pods_elsa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24E95A61A6B789B2219BD2FA /* Pods_elsa.framework */; };
+		F00A6999260D6FF2004F06B7 /* PrescriptionCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00A6998260D6FF2004F06B7 /* PrescriptionCoordinator.swift */; };
 		F015B6D725F33F4E00B20774 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = F015B6D625F33F4E00B20774 /* Home.swift */; };
 		F02D00042602AF0000249A38 /* PrescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02D00032602AF0000249A38 /* PrescriptionView.swift */; };
 		F02D00072602B03D00249A38 /* DeliveryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02D00062602B03D00249A38 /* DeliveryView.swift */; };
@@ -33,6 +34,7 @@
 		24E95A61A6B789B2219BD2FA /* Pods_elsa.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_elsa.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		378B29DC0BE46FA49EC962A3 /* Pods-elsa.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-elsa.release.xcconfig"; path = "Target Support Files/Pods-elsa/Pods-elsa.release.xcconfig"; sourceTree = "<group>"; };
 		642EC8635D20D46180E308DE /* Pods-elsa.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-elsa.debug.xcconfig"; path = "Target Support Files/Pods-elsa/Pods-elsa.debug.xcconfig"; sourceTree = "<group>"; };
+		F00A6998260D6FF2004F06B7 /* PrescriptionCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrescriptionCoordinator.swift; sourceTree = "<group>"; };
 		F015B6D625F33F4E00B20774 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		F02D00032602AF0000249A38 /* PrescriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrescriptionView.swift; sourceTree = "<group>"; };
 		F02D00062602B03D00249A38 /* DeliveryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryView.swift; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 				F02D000C2602BB7D00249A38 /* PrescriptionViewNoSurvey.swift */,
 				F02D00092602BAD600249A38 /* PrescriptionViewYesPreScan.swift */,
 				F02D00132602BD3F00249A38 /* PrescriptionViewYesScan.swift */,
+				F00A6998260D6FF2004F06B7 /* PrescriptionCoordinator.swift */,
 				F06465DD260042A70014A60E /* PillReminder.swift */,
 				F0B4207C25E1E6C900B1BECA /* Assets.xcassets */,
 				F0B4208125E1E6C900B1BECA /* Info.plist */,
@@ -263,7 +266,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nTAGS=\"TODO:|FIXME:\"\nERRORTAG=\"ERROR:\"\nfind \"${SRCROOT}\" \\( -name \"*.h\" -or -name \"*.m\" -or -name \"*.swift\" \\) -print0 | xargs -0 egrep --with-filename --line-number --only-matching \"($TAGS).*\\$|($ERRORTAG).*\\$\" | perl -p -e \"s/($TAGS)/ warning: \\$1/\" | perl -p -e \"s/($ERRORTAG)/ error: \\$1/\"\n";
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nTAGS=\"TODO:\"\nERRORTAG=\"ERROR:\"\nfind \"${SRCROOT}\" \\( -name \"*.h\" -or -name \"*.m\" -or -name \"*.swift\" \\) -print0 | xargs -0 egrep --with-filename --line-number --only-matching \"($TAGS).*\\$|($ERRORTAG).*\\$\" | perl -p -e \"s/($TAGS)/ warning: \\$1/\" | perl -p -e \"s/($ERRORTAG)/ error: \\$1/\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -286,6 +289,7 @@
 				F02D00142602BD3F00249A38 /* PrescriptionViewYesScan.swift in Sources */,
 				F02D000D2602BB7D00249A38 /* PrescriptionViewNoSurvey.swift in Sources */,
 				F036A7BE25E6029D0036D0C5 /* ModelData.swift in Sources */,
+				F00A6999260D6FF2004F06B7 /* PrescriptionCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

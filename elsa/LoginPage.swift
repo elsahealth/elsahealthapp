@@ -10,6 +10,7 @@ import Firebase
 
 struct LoginView : View {
     @ObservedObject var model = ModelData()
+    // TODO: add error/warning when login isn't valid
     
     var body : some View {
         VStack {
