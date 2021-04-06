@@ -4,6 +4,9 @@ PODS:
     - FirebaseAuth (~> 7.6.0)
   - Firebase/CoreOnly (7.6.0):
     - FirebaseCore (= 7.6.0)
+  - Firebase/Functions (7.6.0):
+    - Firebase/CoreOnly
+    - FirebaseFunctions (~> 7.6.0)
   - FirebaseAuth (7.6.0):
     - FirebaseCore (~> 7.0)
     - GoogleUtilities/AppDelegateSwizzler (~> 7.0)
@@ -18,6 +21,9 @@ PODS:
     - GoogleUtilities/Environment (~> 7.0)
     - GoogleUtilities/Logger (~> 7.0)
     - nanopb (~> 2.30907.0)
+  - FirebaseFunctions (7.6.0):
+    - FirebaseCore (~> 7.0)
+    - GTMSessionFetcher/Core (~> 1.4)
   - GoogleDataTransport (8.2.0):
     - nanopb (~> 2.30907.0)
   - GoogleUtilities/AppDelegateSwizzler (7.2.2):
@@ -42,9 +48,14 @@ PODS:
   - nanopb/decode (2.30907.0)
   - nanopb/encode (2.30907.0)
   - PromisesObjC (1.2.12)
+  - Stripe (21.0.0-mc-beta-1):
+    - Stripe/Stripe3DS2 (= 21.0.0-mc-beta-1)
+  - Stripe/Stripe3DS2 (21.0.0-mc-beta-1)
 
 DEPENDENCIES:
   - Firebase/Auth
+  - Firebase/Functions
+  - Stripe (from `https://github.com/stripe/stripe-ios.git`, branch `mc-beta-2`)
 
 SPEC REPOS:
   trunk:
@@ -52,23 +63,36 @@ SPEC REPOS:
     - FirebaseAuth
     - FirebaseCore
     - FirebaseCoreDiagnostics
+    - FirebaseFunctions
     - GoogleDataTransport
     - GoogleUtilities
     - GTMSessionFetcher
     - nanopb
     - PromisesObjC
 
+EXTERNAL SOURCES:
+  Stripe:
+    :branch: mc-beta-2
+    :git: https://github.com/stripe/stripe-ios.git
+
+CHECKOUT OPTIONS:
+  Stripe:
+    :commit: afeb50345446f889ca4cc076299ff6e4143e222d
+    :git: https://github.com/stripe/stripe-ios.git
+
 SPEC CHECKSUMS:
   Firebase: e1e089d9aac215a52442583f818ab61de3c4581b
   FirebaseAuth: 0a1df88dc32569db509e6269c3e4bf2a168e8ae8
   FirebaseCore: 0a43b7f1c5b36f3358cd703011ca4c7e0df55870
   FirebaseCoreDiagnostics: ee1184d51da3293335b83355aad20f537acc24cf
+  FirebaseFunctions: 03e30a9506b04786917e0de6d8c85cdc260fb2c8
   GoogleDataTransport: 1024b1a4dfbd7a0e92cb20d7e0a6f1fb66b449a4
   GoogleUtilities: 31c5b01f978a70c6cff2afc6272b3f1921614b43
   GTMSessionFetcher: b3503b20a988c4e20cc189aa798fd18220133f52
   nanopb: 59221d7f958fb711001e6a449489542d92ae113e
   PromisesObjC: 3113f7f76903778cf4a0586bd1ab89329a0b7b97
+  Stripe: 4f9369bb8f036ed106d12355e622d934c2ec60a1
 
-PODFILE CHECKSUM: 3e1c1090e5a61e2a263f309df0b97dba261c1938
+PODFILE CHECKSUM: 92d1bfee8d5274427222aff8b297b6f258403323
 
 COCOAPODS: 1.10.1

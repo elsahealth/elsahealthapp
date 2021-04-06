@@ -6,5 +6,7 @@ target 'elsa' do
   use_frameworks!
 
   # Pods for elsa
-pod 'Firebase/Auth'	
+pod 'Firebase/Auth'
+pod 'Firebase/Functions'
+pod 'Stripe', :git => 'https://github.com/stripe/stripe-ios.git', :branch => 'mc-beta-2'	
 end

@@ -7,6 +7,8 @@
 
 import SwiftUI
 import Firebase
+import UIKit
+import Stripe
 
 @main
 struct elsaApp: App {
