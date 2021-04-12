@@ -7,6 +7,7 @@ target 'elsa' do
 
   # Pods for elsa
 pod 'Firebase/Auth'
-pod 'Firebase/Functions'
+pod 'Firebase/Firestore'
+pod 'FirebaseFirestoreSwift'
 pod 'Stripe', :git => 'https://github.com/stripe/stripe-ios.git', :branch => 'mc-beta-2'	
 end

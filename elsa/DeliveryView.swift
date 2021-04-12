@@ -6,10 +6,13 @@
 //
 
 import SwiftUI
+import Stripe
 
 struct DeliveryView: View {
     var body: some View {
-        Text("Delivery view")
+        NavigationLink(destination: PaymentView()) {
+            Text("Payment View")
+        }
     }
 }
 
