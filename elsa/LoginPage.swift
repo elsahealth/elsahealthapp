@@ -9,7 +9,16 @@ import SwiftUI
 import Firebase
 
 struct LoginView : View {
-    @ObservedObject var model = ModelData()
+    //@ObservedObject var model = ModelData()
+    @ObservedObject var sessionStore = SessionStore()
+    
+    @State var email: String = ""
+    @State var password: String = ""
+    @State var loading: Bool = false
+    @State var error: Bool = false
+    @State private var isLoggedIn: Bool = false
+    
+
     // TODO: add error/warning when login isn't valid
     
     var body : some View {
@@ -24,10 +33,10 @@ struct LoginView : View {
             
             VStack(spacing: 20) {
                 
-                CustomTextField(placeHolder: "Email", txt: $model.email)
+                CustomTextField(placeHolder: "Email", txt: $email)
                 
                 HStack {
-                    CustomTextField(placeHolder: "Password", txt: $model.password)
+                    CustomTextField(placeHolder: "Password", txt: $password)
                     //Image(systemName: <#T##String#>)
                     // TODO: add the eye pic so that we can view the password
                     // on both this view and the sign up one
@@ -37,10 +46,20 @@ struct LoginView : View {
             .padding(.top)
             
             //TODO: add loading screen
-            NavigationLink(destination: WelcomePage(), isActive: $model.isLoggedin) {
+            NavigationLink(destination: WelcomePage(), isActive: $isLoggedIn) {
                 EmptyView() }
             Button {
-                model.login()
+                loading = true
+                error = false
+                sessionStore.login(email: email, password: password) { (result, error) in
+                    self.loading = false
+                    if error != nil {
+                        self.error = true
+                    } else {
+                        self.isLoggedIn = true
+                        self.password = ""
+                    }
+                }
             } label: {
                 Text("LOG IN")
                     .fontWeight(.bold)
@@ -50,13 +69,13 @@ struct LoginView : View {
                     .background(Color("elsaBlue1"))
                     .clipShape(Capsule())
             }
-            .alert(isPresented: $model.alert) {
-                Alert(title: Text("Message"), message: Text("Please input the fields properly"), dismissButton: .destructive(Text("Ok")))
-            }
+//            .alert(isPresented: $model.alert) {
+//                Alert(title: Text("Message"), message: Text("Please input the fields properly"), dismissButton: .destructive(Text("Ok")))
+//            }
             .padding(.top, 22)
             
             
-            Button(action: model.resetPassword){
+            Button(action: sessionStore.resetPassword){
                 Text("Forgot Password?")
                     .fontWeight(.bold)
                 
@@ -75,10 +94,10 @@ struct LoginView : View {
 //            }
             Spacer()
         }
-        .fullScreenCover(isPresented: $model.isSignedUp) {
-            SignUp()
-        }
-        .alert(isPresented: $model.isLinkEmailSent) {
+//        .fullScreenCover(isPresented: $model.isSignedUp) {
+//            SignUp()
+//        }
+        .alert(isPresented: $sessionStore.isLinkEmailSent) {
             Alert(title: Text("Message"), message: Text("The password reset link has been sent"), dismissButton: .destructive(Text("Ok")))
             //TODO: add a check to see if this is a valid address
         }

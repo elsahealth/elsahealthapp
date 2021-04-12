@@ -57,7 +57,7 @@ struct HomePage: View {
                         Text("Track delivery status")
                             .font(.caption2)
                         NavigationLink(
-                            destination: PrescriptionView(),
+                            destination: DeliveryView(),
                             label: {
                                 Text("Start")
                                     .padding(.vertical, 2.0)

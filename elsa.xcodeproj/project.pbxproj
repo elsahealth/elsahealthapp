@@ -10,6 +10,10 @@
 		0D418009363A9EEC3099F9D8 /* Pods_elsa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24E95A61A6B789B2219BD2FA /* Pods_elsa.framework */; };
 		F00A6999260D6FF2004F06B7 /* PrescriptionCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00A6998260D6FF2004F06B7 /* PrescriptionCoordinator.swift */; };
 		F015B6D725F33F4E00B20774 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = F015B6D625F33F4E00B20774 /* Home.swift */; };
+		F01F0ECE261E079D00BF278D /* PaymentStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01F0ECD261E079D00BF278D /* PaymentStore.swift */; };
+		F01F0EE7261E23C200BF278D /* PaymentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01F0EE6261E23C200BF278D /* PaymentView.swift */; };
+		F01F0EEA261E259F00BF278D /* SessionStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01F0EE9261E259F00BF278D /* SessionStore.swift */; };
+		F01F0EED261E963400BF278D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01F0EEC261E963400BF278D /* User.swift */; };
 		F02D00042602AF0000249A38 /* PrescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02D00032602AF0000249A38 /* PrescriptionView.swift */; };
 		F02D00072602B03D00249A38 /* DeliveryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02D00062602B03D00249A38 /* DeliveryView.swift */; };
 		F02D000A2602BAD600249A38 /* PrescriptionViewYesPreScan.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02D00092602BAD600249A38 /* PrescriptionViewYesPreScan.swift */; };
@@ -36,6 +40,10 @@
 		642EC8635D20D46180E308DE /* Pods-elsa.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-elsa.debug.xcconfig"; path = "Target Support Files/Pods-elsa/Pods-elsa.debug.xcconfig"; sourceTree = "<group>"; };
 		F00A6998260D6FF2004F06B7 /* PrescriptionCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrescriptionCoordinator.swift; sourceTree = "<group>"; };
 		F015B6D625F33F4E00B20774 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		F01F0ECD261E079D00BF278D /* PaymentStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentStore.swift; sourceTree = "<group>"; };
+		F01F0EE6261E23C200BF278D /* PaymentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentView.swift; sourceTree = "<group>"; };
+		F01F0EE9261E259F00BF278D /* SessionStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionStore.swift; sourceTree = "<group>"; };
+		F01F0EEC261E963400BF278D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		F02D00032602AF0000249A38 /* PrescriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrescriptionView.swift; sourceTree = "<group>"; };
 		F02D00062602B03D00249A38 /* DeliveryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryView.swift; sourceTree = "<group>"; };
 		F02D00092602BAD600249A38 /* PrescriptionViewYesPreScan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrescriptionViewYesPreScan.swift; sourceTree = "<group>"; };
@@ -114,17 +122,21 @@
 				F0B4208825E1E72700B1BECA /* SignUp.swift */,
 				F036A7C025E6034C0036D0C5 /* LoginSignUpHelper.swift */,
 				F036A7BD25E6029D0036D0C5 /* ModelData.swift */,
-				F036A7CA25E9F2A90036D0C5 /* GoogleService-Info.plist */,
 				F075553E25E4BF0900BAE510 /* LoginPage.swift */,
 				F075553B25E4BE5800BAE510 /* WelcomePage.swift */,
 				F015B6D625F33F4E00B20774 /* Home.swift */,
 				F02D00062602B03D00249A38 /* DeliveryView.swift */,
+				F01F0ECD261E079D00BF278D /* PaymentStore.swift */,
+				F01F0EE9261E259F00BF278D /* SessionStore.swift */,
+				F01F0EEC261E963400BF278D /* User.swift */,
+				F01F0EE6261E23C200BF278D /* PaymentView.swift */,
 				F02D00032602AF0000249A38 /* PrescriptionView.swift */,
 				F02D000C2602BB7D00249A38 /* PrescriptionViewNoSurvey.swift */,
 				F02D00092602BAD600249A38 /* PrescriptionViewYesPreScan.swift */,
 				F02D00132602BD3F00249A38 /* PrescriptionViewYesScan.swift */,
 				F00A6998260D6FF2004F06B7 /* PrescriptionCoordinator.swift */,
 				F06465DD260042A70014A60E /* PillReminder.swift */,
+				F036A7CA25E9F2A90036D0C5 /* GoogleService-Info.plist */,
 				F0B4207C25E1E6C900B1BECA /* Assets.xcassets */,
 				F0B4208125E1E6C900B1BECA /* Info.plist */,
 				F0B4207E25E1E6C900B1BECA /* Preview Content */,
@@ -283,13 +295,17 @@
 				F0B4207B25E1E6C600B1BECA /* ContentView.swift in Sources */,
 				F02D00072602B03D00249A38 /* DeliveryView.swift in Sources */,
 				F06465DE260042A70014A60E /* PillReminder.swift in Sources */,
+				F01F0ECE261E079D00BF278D /* PaymentStore.swift in Sources */,
+				F01F0EE7261E23C200BF278D /* PaymentView.swift in Sources */,
 				F0B4207925E1E6C600B1BECA /* elsaApp.swift in Sources */,
 				F015B6D725F33F4E00B20774 /* Home.swift in Sources */,
 				F02D000A2602BAD600249A38 /* PrescriptionViewYesPreScan.swift in Sources */,
 				F02D00142602BD3F00249A38 /* PrescriptionViewYesScan.swift in Sources */,
+				F01F0EEA261E259F00BF278D /* SessionStore.swift in Sources */,
 				F02D000D2602BB7D00249A38 /* PrescriptionViewNoSurvey.swift in Sources */,
 				F036A7BE25E6029D0036D0C5 /* ModelData.swift in Sources */,
 				F00A6999260D6FF2004F06B7 /* PrescriptionCoordinator.swift in Sources */,
+				F01F0EED261E963400BF278D /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
