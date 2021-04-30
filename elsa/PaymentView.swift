@@ -12,6 +12,8 @@ struct PaymentView: View {
     @ObservedObject var paymentStore = PaymentStore()
     @ObservedObject var sessionStore = SessionStore()
     
+    let offering: Offerings
+    
     func getUser() {
         sessionStore.listen()
     }
@@ -29,7 +31,7 @@ struct PaymentView: View {
                         }.disabled(paymentStore.paymentResult != nil)
                     } else {
                         Button("Start") {
-                            paymentStore.preparePayment(uid: user.uid, amount: 1999, currency: "cad")
+                            paymentStore.preparePayment(uid: user.uid, amount: offering.price, currency: "cad")
                         }.disabled(paymentStore.isLoading)
                     }
                     if let result = paymentStore.paymentResult {
@@ -54,6 +56,6 @@ struct PaymentView: View {
 
 struct PaymentView_Previews: PreviewProvider {
     static var previews: some View {
-        PaymentView()
+        PaymentView(offering: offering[0])
     }
 }

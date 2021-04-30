@@ -15,7 +15,7 @@
 		F01F0EEA261E259F00BF278D /* SessionStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01F0EE9261E259F00BF278D /* SessionStore.swift */; };
 		F01F0EED261E963400BF278D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01F0EEC261E963400BF278D /* User.swift */; };
 		F02D00042602AF0000249A38 /* PrescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02D00032602AF0000249A38 /* PrescriptionView.swift */; };
-		F02D00072602B03D00249A38 /* DeliveryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02D00062602B03D00249A38 /* DeliveryView.swift */; };
+		F02D00072602B03D00249A38 /* OfferingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02D00062602B03D00249A38 /* OfferingsView.swift */; };
 		F02D000A2602BAD600249A38 /* PrescriptionViewYesPreScan.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02D00092602BAD600249A38 /* PrescriptionViewYesPreScan.swift */; };
 		F02D000D2602BB7D00249A38 /* PrescriptionViewNoSurvey.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02D000C2602BB7D00249A38 /* PrescriptionViewNoSurvey.swift */; };
 		F02D00142602BD3F00249A38 /* PrescriptionViewYesScan.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02D00132602BD3F00249A38 /* PrescriptionViewYesScan.swift */; };
@@ -26,12 +26,18 @@
 		F06465DE260042A70014A60E /* PillReminder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06465DD260042A70014A60E /* PillReminder.swift */; };
 		F075553C25E4BE5900BAE510 /* WelcomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F075553B25E4BE5800BAE510 /* WelcomePage.swift */; };
 		F075553F25E4BF0900BAE510 /* LoginPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F075553E25E4BF0900BAE510 /* LoginPage.swift */; };
+		F08F70B9263640F7003D4AE3 /* OfferingsItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F08F70B8263640F7003D4AE3 /* OfferingsItemView.swift */; };
+		F08F70BC26364266003D4AE3 /* offerings.json in Resources */ = {isa = PBXBuildFile; fileRef = F08F70BB26364266003D4AE3 /* offerings.json */; };
+		F08F70C026364496003D4AE3 /* CodableBundleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F08F70BF26364496003D4AE3 /* CodableBundleExtension.swift */; };
 		F0B4207925E1E6C600B1BECA /* elsaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B4207825E1E6C600B1BECA /* elsaApp.swift */; };
 		F0B4207B25E1E6C600B1BECA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B4207A25E1E6C600B1BECA /* ContentView.swift */; };
 		F0B4207D25E1E6C900B1BECA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F0B4207C25E1E6C900B1BECA /* Assets.xcassets */; };
 		F0B4208025E1E6C900B1BECA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F0B4207F25E1E6C900B1BECA /* Preview Assets.xcassets */; };
 		F0B4208925E1E72700B1BECA /* SignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B4208825E1E72700B1BECA /* SignUp.swift */; };
 		F0B4209725E1E90C00B1BECA /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = F0B4209625E1E90C00B1BECA /* .gitignore */; };
+		F0E20751262CFCC8003C3E1E /* Offerings.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E20750262CFCC8003C3E1E /* Offerings.swift */; };
+		F0E20759262D108B003C3E1E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E20758262D108B003C3E1E /* Constants.swift */; };
+		F0E2075D262D134A003C3E1E /* OfferingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E2075C262D134A003C3E1E /* OfferingsViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,7 +51,7 @@
 		F01F0EE9261E259F00BF278D /* SessionStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionStore.swift; sourceTree = "<group>"; };
 		F01F0EEC261E963400BF278D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		F02D00032602AF0000249A38 /* PrescriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrescriptionView.swift; sourceTree = "<group>"; };
-		F02D00062602B03D00249A38 /* DeliveryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryView.swift; sourceTree = "<group>"; };
+		F02D00062602B03D00249A38 /* OfferingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferingsView.swift; sourceTree = "<group>"; };
 		F02D00092602BAD600249A38 /* PrescriptionViewYesPreScan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrescriptionViewYesPreScan.swift; sourceTree = "<group>"; };
 		F02D000C2602BB7D00249A38 /* PrescriptionViewNoSurvey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrescriptionViewNoSurvey.swift; sourceTree = "<group>"; };
 		F02D00132602BD3F00249A38 /* PrescriptionViewYesScan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrescriptionViewYesScan.swift; sourceTree = "<group>"; };
@@ -56,6 +62,9 @@
 		F06465DD260042A70014A60E /* PillReminder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PillReminder.swift; sourceTree = "<group>"; };
 		F075553B25E4BE5800BAE510 /* WelcomePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomePage.swift; sourceTree = "<group>"; };
 		F075553E25E4BF0900BAE510 /* LoginPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPage.swift; sourceTree = "<group>"; };
+		F08F70B8263640F7003D4AE3 /* OfferingsItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferingsItemView.swift; sourceTree = "<group>"; };
+		F08F70BB26364266003D4AE3 /* offerings.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = offerings.json; path = elsa/offerings.json; sourceTree = SOURCE_ROOT; };
+		F08F70BF26364496003D4AE3 /* CodableBundleExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableBundleExtension.swift; sourceTree = "<group>"; };
 		F0B4207525E1E6C600B1BECA /* elsa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = elsa.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0B4207825E1E6C600B1BECA /* elsaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = elsaApp.swift; sourceTree = "<group>"; };
 		F0B4207A25E1E6C600B1BECA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -64,6 +73,9 @@
 		F0B4208125E1E6C900B1BECA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F0B4208825E1E72700B1BECA /* SignUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp.swift; sourceTree = "<group>"; };
 		F0B4209625E1E90C00B1BECA /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		F0E20750262CFCC8003C3E1E /* Offerings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Offerings.swift; sourceTree = "<group>"; };
+		F0E20758262D108B003C3E1E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		F0E2075C262D134A003C3E1E /* OfferingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferingsViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,20 +129,25 @@
 		F0B4207725E1E6C600B1BECA /* elsa */ = {
 			isa = PBXGroup;
 			children = (
+				F0E20757262D107A003C3E1E /* Utility */,
+				F0E20754262CFDD2003C3E1E /* ViewModels */,
+				F0E20753262CFD68003C3E1E /* Views */,
+				F0E2074F262CFCA2003C3E1E /* Models */,
 				F0B4207825E1E6C600B1BECA /* elsaApp.swift */,
 				F0B4207A25E1E6C600B1BECA /* ContentView.swift */,
 				F0B4208825E1E72700B1BECA /* SignUp.swift */,
 				F036A7C025E6034C0036D0C5 /* LoginSignUpHelper.swift */,
+				F08F70BB26364266003D4AE3 /* offerings.json */,
 				F036A7BD25E6029D0036D0C5 /* ModelData.swift */,
 				F075553E25E4BF0900BAE510 /* LoginPage.swift */,
 				F075553B25E4BE5800BAE510 /* WelcomePage.swift */,
 				F015B6D625F33F4E00B20774 /* Home.swift */,
-				F02D00062602B03D00249A38 /* DeliveryView.swift */,
 				F01F0ECD261E079D00BF278D /* PaymentStore.swift */,
 				F01F0EE9261E259F00BF278D /* SessionStore.swift */,
 				F01F0EEC261E963400BF278D /* User.swift */,
 				F01F0EE6261E23C200BF278D /* PaymentView.swift */,
 				F02D00032602AF0000249A38 /* PrescriptionView.swift */,
+				F08F70BF26364496003D4AE3 /* CodableBundleExtension.swift */,
 				F02D000C2602BB7D00249A38 /* PrescriptionViewNoSurvey.swift */,
 				F02D00092602BAD600249A38 /* PrescriptionViewYesPreScan.swift */,
 				F02D00132602BD3F00249A38 /* PrescriptionViewYesScan.swift */,
@@ -151,6 +168,39 @@
 				F0B4207F25E1E6C900B1BECA /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		F0E2074F262CFCA2003C3E1E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F0E20750262CFCC8003C3E1E /* Offerings.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F0E20753262CFD68003C3E1E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F02D00062602B03D00249A38 /* OfferingsView.swift */,
+				F08F70B8263640F7003D4AE3 /* OfferingsItemView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F0E20754262CFDD2003C3E1E /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				F0E2075C262D134A003C3E1E /* OfferingsViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		F0E20757262D107A003C3E1E /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				F0E20758262D108B003C3E1E /* Constants.swift */,
+			);
+			path = Utility;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -216,6 +266,7 @@
 				F0B4209725E1E90C00B1BECA /* .gitignore in Resources */,
 				F0B4208025E1E6C900B1BECA /* Preview Assets.xcassets in Resources */,
 				F036A7CB25E9F2A90036D0C5 /* GoogleService-Info.plist in Resources */,
+				F08F70BC26364266003D4AE3 /* offerings.json in Resources */,
 				F0B4207D25E1E6C900B1BECA /* Assets.xcassets in Resources */,
 				F036A7C425E9E0880036D0C5 /* GoogleService-Info 16.31.17.plist in Resources */,
 			);
@@ -293,17 +344,22 @@
 				F0B4208925E1E72700B1BECA /* SignUp.swift in Sources */,
 				F02D00042602AF0000249A38 /* PrescriptionView.swift in Sources */,
 				F0B4207B25E1E6C600B1BECA /* ContentView.swift in Sources */,
-				F02D00072602B03D00249A38 /* DeliveryView.swift in Sources */,
+				F0E2075D262D134A003C3E1E /* OfferingsViewModel.swift in Sources */,
+				F02D00072602B03D00249A38 /* OfferingsView.swift in Sources */,
+				F08F70C026364496003D4AE3 /* CodableBundleExtension.swift in Sources */,
 				F06465DE260042A70014A60E /* PillReminder.swift in Sources */,
 				F01F0ECE261E079D00BF278D /* PaymentStore.swift in Sources */,
 				F01F0EE7261E23C200BF278D /* PaymentView.swift in Sources */,
 				F0B4207925E1E6C600B1BECA /* elsaApp.swift in Sources */,
+				F0E20759262D108B003C3E1E /* Constants.swift in Sources */,
 				F015B6D725F33F4E00B20774 /* Home.swift in Sources */,
 				F02D000A2602BAD600249A38 /* PrescriptionViewYesPreScan.swift in Sources */,
 				F02D00142602BD3F00249A38 /* PrescriptionViewYesScan.swift in Sources */,
 				F01F0EEA261E259F00BF278D /* SessionStore.swift in Sources */,
 				F02D000D2602BB7D00249A38 /* PrescriptionViewNoSurvey.swift in Sources */,
 				F036A7BE25E6029D0036D0C5 /* ModelData.swift in Sources */,
+				F08F70B9263640F7003D4AE3 /* OfferingsItemView.swift in Sources */,
+				F0E20751262CFCC8003C3E1E /* Offerings.swift in Sources */,
 				F00A6999260D6FF2004F06B7 /* PrescriptionCoordinator.swift in Sources */,
 				F01F0EED261E963400BF278D /* User.swift in Sources */,
 			);
