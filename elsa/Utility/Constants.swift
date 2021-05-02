@@ -8,7 +8,7 @@
 import SwiftUI
 
 // LAYOUT
-var rowSpacing: CGFloat = 10
+//var rowSpacing: CGFloat = 10
 var columns: [GridItem] {
     Array(repeating: GridItem(.flexible()), count: 2)
 }

@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SDWebImageSwiftUI
 
 struct OfferingsItemView: View {
   // MARK: - PROPERTY
@@ -18,7 +19,7 @@ struct OfferingsItemView: View {
     VStack(alignment: .leading, spacing: 6, content: {
       // PHOTO
       ZStack {
-        Image(offering.photo)
+        WebImage(url: offering.photo)
           .resizable()
           .scaledToFit()
           .padding(10)

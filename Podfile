@@ -9,5 +9,6 @@ target 'elsa' do
 pod 'Firebase/Auth'
 pod 'Firebase/Firestore'
 pod 'FirebaseFirestoreSwift'
+pod 'SDWebImageSwiftUI'
 pod 'Stripe', :git => 'https://github.com/stripe/stripe-ios.git', :branch => 'mc-beta-2'	
 end

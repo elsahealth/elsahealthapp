@@ -303,6 +303,11 @@ PODS:
   - nanopb/decode (1.30906.0)
   - nanopb/encode (1.30906.0)
   - PromisesObjC (1.2.12)
+  - SDWebImage (5.11.1):
+    - SDWebImage/Core (= 5.11.1)
+  - SDWebImage/Core (5.11.1)
+  - SDWebImageSwiftUI (2.0.2):
+    - SDWebImage (~> 5.10)
   - Stripe (21.0.0-mc-beta-1):
     - Stripe/Stripe3DS2 (= 21.0.0-mc-beta-1)
   - Stripe/Stripe3DS2 (21.0.0-mc-beta-1)
@@ -311,6 +316,7 @@ DEPENDENCIES:
   - Firebase/Auth
   - Firebase/Firestore
   - FirebaseFirestoreSwift
+  - SDWebImageSwiftUI
   - Stripe (from `https://github.com/stripe/stripe-ios.git`, branch `mc-beta-2`)
 
 SPEC REPOS:
@@ -331,6 +337,8 @@ SPEC REPOS:
     - leveldb-library
     - nanopb
     - PromisesObjC
+    - SDWebImage
+    - SDWebImageSwiftUI
 
 EXTERNAL SOURCES:
   Stripe:
@@ -359,8 +367,10 @@ SPEC CHECKSUMS:
   leveldb-library: 50c7b45cbd7bf543c81a468fe557a16ae3db8729
   nanopb: 59317e09cf1f1a0af72f12af412d54edf52603fc
   PromisesObjC: 3113f7f76903778cf4a0586bd1ab89329a0b7b97
+  SDWebImage: a7f831e1a65eb5e285e3fb046a23fcfbf08e696d
+  SDWebImageSwiftUI: 8a3923c95108312b03a599ec1498754af55a6819
   Stripe: 4f9369bb8f036ed106d12355e622d934c2ec60a1
 
-PODFILE CHECKSUM: d3b137f3325f9d5c82542fa7ae969c2a10b9e4c1
+PODFILE CHECKSUM: af30493bb5dd8a18ac6ab596d7b059d69ed373da
 
 COCOAPODS: 1.10.1

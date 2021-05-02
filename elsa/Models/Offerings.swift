@@ -13,7 +13,7 @@ struct Offerings : Identifiable, Codable {
     var name: String
     var description: String
     var price: Int
-    var photo: String
+    var photo: URL
     
     var formattedPrice: String { return "$\(price/100)" }
     
