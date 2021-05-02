@@ -13,27 +13,17 @@ struct OfferingsView: View {
     
     var body: some View {
         VStack {
-            // TODO: fix the implementation. I want to see a list of all the possible options then select the one that I want to buy
-//            ForEach(viewModel.offerings, id: \.id) { item in
-//                NavigationLink(destination: PaymentView(offering: item)) {
-//                    LazyVGrid(columns: gridLayout, spacing : 15, content: {
-//                        OfferingsItemView(offering: item)
-//                    })
-//                }
-//            }
-            // TODO: to be deleted once I get the above working
-            List(viewModel.offerings) { offerings in
-                VStack(alignment: .leading) {
-                    Text(offerings.name)
-                        .font(.headline)
-                    Text(offerings.description)
-                        .font(.caption)
-                    Text("Price is: \(offerings.formattedPrice)")
-                        .font(.caption)
-                }
+            ScrollView(content: {
+                LazyVGrid(columns: columns, spacing : 15, content: {
+                    ForEach(viewModel.offerings, id: \.id) { item in
+                        NavigationLink(destination: PaymentView(offering: item)) {
+                            OfferingsItemView(offering: item)
+                        }
+                    }
+                })
+            })
             }.onAppear() {
                 self.viewModel.fetchData()
-            }
         }
     }
 }

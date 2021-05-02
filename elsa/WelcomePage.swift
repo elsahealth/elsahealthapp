@@ -46,7 +46,7 @@ struct WelcomePage: View {
                             .frame(width: geo.size.width, height: geo.size.height, alignment: .center)
                     }
                 }
-                NavigationLink(destination: HomePage()) {
+                NavigationLink(destination: HomeView()) {
                     Text("GET STARTED")
                         .fontWeight(.bold)
                         .foregroundColor(.white)

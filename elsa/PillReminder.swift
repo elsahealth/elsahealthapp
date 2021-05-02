@@ -51,7 +51,7 @@ struct PillReminder: View {
                     //TODO: Complete the implementation
                 }
             }
-            NavigationLink(destination: HomePage(), isActive: $isSaved) { EmptyView() }
+            NavigationLink(destination: HomeView(), isActive: $isSaved) { EmptyView() }
                 Button(action: {
                     // Allowing the permissions
                     UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound]) { success, error in
@@ -100,7 +100,7 @@ struct PillReminder: View {
             
             
             
-            NavigationLink(destination: HomePage()) {
+            NavigationLink(destination: HomeView()) {
                 Text("No thanks")
             }
         }
