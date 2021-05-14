@@ -22,7 +22,6 @@ struct SignUp: View {
     @State var password: String = ""
     @State var passwordReEnter: String = ""
     @State var isSignedUp: Bool = false
-    @State var loading: Bool = false
     @State var error: Bool = false
     
     var body : some View {
@@ -58,10 +57,8 @@ struct SignUp: View {
                 NavigationLink(destination: LoginView(), isActive: $isSignedUp) {
                     EmptyView() }
                 Button {
-                    self.loading = true
                     self.error = false
                     sessionStore.signUp(email: email, password: password, reenterPassword: passwordReEnter) { (result, error) in
-                        self.loading = false
                         if error != nil {
                             self.error = true
                         } else {
