@@ -1,5 +1,5 @@
 //
-//  WelcomePage.swift
+//  WelcomePageView.swift
 //  elsa
 //
 //  Created by Dusan Boskovic on 2021-02-22.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct WelcomePage: View {
+struct WelcomePageView: View {
     var body: some View {
         ZStack{
             Color("welcomePageBackground")
@@ -62,10 +62,10 @@ struct WelcomePage: View {
     }
 }
 
-struct WelcomePage_Previews: PreviewProvider {
+struct WelcomePageView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            WelcomePage()
+            WelcomePageView()
         }
     }
 }

@@ -8,34 +8,30 @@
 import SwiftUI
 import SDWebImageSwiftUI
 
-struct OfferingsItemView: View {
-  // MARK: - PROPERTY
+struct OfferingsItemView: View {  
+    let offering: Offerings
   
-  let offering: Offerings
-  
-  // MARK: - BODY
-  
-  var body: some View {
-    VStack(alignment: .leading, spacing: 6, content: {
-      // PHOTO
-      ZStack {
-        WebImage(url: offering.photo)
-          .resizable()
-          .scaledToFit()
-          .padding(10)
-      } //: ZSTACK
-      .cornerRadius(12)
+    var body: some View {
+        VStack(alignment: .leading, spacing: 6, content: {
+            // PHOTO
+            ZStack {
+                WebImage(url: offering.photo)
+                    .resizable()
+                    .scaledToFit()
+                    .padding(10)
+            }
+            .cornerRadius(12)
       
-      // NAME
-      Text(offering.name)
-        .font(.title3)
-        .fontWeight(.black)
+            // NAME
+            Text(offering.name)
+                .font(.title3)
+                .fontWeight(.black)
       
-      // PRICE
-      Text(offering.formattedPrice)
-        .fontWeight(.semibold)
-        .foregroundColor(.gray)
-    }) //: VSTACK
+            // PRICE
+            Text(offering.formattedPrice)
+                .fontWeight(.semibold)
+                .foregroundColor(.gray)
+    })
   }
 }
 

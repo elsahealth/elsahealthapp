@@ -1,5 +1,5 @@
 //
-//  LoginView.swift
+//  LoginPageView.swift
 //  elsa
 //
 //  Created by Dusan Boskovic on 2021-02-22.
@@ -8,7 +8,7 @@
 import SwiftUI
 import Firebase
 
-struct LoginView : View {
+struct LoginPageView : View {
     //@ObservedObject var model = ModelData()
     @ObservedObject var sessionStore = SessionStore()
     
@@ -46,7 +46,7 @@ struct LoginView : View {
             .padding(.top)
             
             //TODO: add loading screen
-            NavigationLink(destination: WelcomePage(), isActive: $isLoggedIn) {
+            NavigationLink(destination: WelcomePageView(), isActive: $isLoggedIn) {
                 EmptyView() }
             Button {
                 loading = true
@@ -95,7 +95,7 @@ struct LoginView : View {
             Spacer()
         }
 //        .fullScreenCover(isPresented: $model.isSignedUp) {
-//            SignUp()
+//            SignUpView()
 //        }
         .alert(isPresented: $sessionStore.isLinkEmailSent) {
             Alert(title: Text("Message"), message: Text("The password reset link has been sent"), dismissButton: .destructive(Text("Ok")))
@@ -104,8 +104,8 @@ struct LoginView : View {
     }
 }
 
-struct LoginView_Previews: PreviewProvider {
+struct LoginPageView_Previews: PreviewProvider {
     static var previews: some View {
-        LoginView()
+        LoginPageView()
     }
 }

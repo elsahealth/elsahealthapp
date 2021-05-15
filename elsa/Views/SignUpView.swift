@@ -1,5 +1,5 @@
 //
-//  SignUp.swift
+//  SignUpView.swift
 //  elsa
 //
 //  Created by Dusan Boskovic on 2021-02-20.
@@ -14,7 +14,7 @@ import SwiftUI
  
  */
 
-struct SignUp: View {
+struct SignUpView: View {
     //@ObservedObject var model = ModelData()
     @ObservedObject var sessionStore = SessionStore()
     
@@ -54,7 +54,7 @@ struct SignUp: View {
                 /* figure out what to do here. once we select "SIGN UP" we go right to
                 the next view. maybe when signing up, we have the log in view pop up instead?
                 */
-                NavigationLink(destination: LoginView(), isActive: $isSignedUp) {
+                NavigationLink(destination: LoginPageView(), isActive: $isSignedUp) {
                     EmptyView() }
                 Button {
                     self.error = false
@@ -97,8 +97,8 @@ struct SignUp: View {
 
 
 
-struct SignUp_Previews: PreviewProvider {
+struct SignUpView_Previews: PreviewProvider {
     static var previews: some View {
-        SignUp()
+        SignUpView()
     }
 }

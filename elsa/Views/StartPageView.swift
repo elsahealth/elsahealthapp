@@ -1,5 +1,5 @@
  //
-//  ContentView.swift
+//  StartPageView.swift
 //  elsa
 //
 //  Created by Dusan Boskovic on 2021-02-19.
@@ -8,7 +8,7 @@
 import SwiftUI
 import Firebase
 
-struct ContentView: View {
+struct StartPageView: View {
     @AppStorage("log_status") var status = false
     
     var body: some View {
@@ -22,7 +22,7 @@ struct ContentView: View {
                     .foregroundColor(/*@START_MENU_TOKEN@*/.gray/*@END_MENU_TOKEN@*/)
                     .multilineTextAlignment(.center)
                     //.font(Font.custom("hirakakustd-w8", size: 20))
-                NavigationLink(destination: SignUp()) {
+                NavigationLink(destination: SignUpView()) {
                     Text("SIGN UP")
                         .fontWeight(.semibold)
                         //.font(Font.custom("hirakakustd-w8", size: 8))
@@ -46,7 +46,7 @@ struct ContentView: View {
 //                                
 //                            }
 //                        }
-                        NavigationLink(destination: LoginView()) {
+                        NavigationLink(destination: LoginPageView()) {
                             Text("Log in")
                                 //.font(.custom("hirakakustd-w8"))
                         }
@@ -58,8 +58,8 @@ struct ContentView: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct StartPageView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        StartPageView()
     }
 }

@@ -12,7 +12,7 @@ struct Offerings : Identifiable, Codable {
     @DocumentID var id: String? = UUID().uuidString
     var name: String
     var description: String
-    var price: Int
+    var price: Double
     var photo: URL
     
     var formattedPrice: String { return "$\(price/100)" }

@@ -14,7 +14,7 @@ class PaymentStore: ObservableObject {
     @Published var paymentResult: PaymentResult?
     @Published var isLoading = false
     
-    func preparePayment(uid: String, amount: Int, currency: String) {
+    func preparePayment(uid: String, amount: Double, currency: String) {
         self.paymentSheet = nil
         self.paymentResult = nil
         self.isLoading = true

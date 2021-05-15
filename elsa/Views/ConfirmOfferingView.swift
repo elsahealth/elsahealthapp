@@ -7,12 +7,43 @@
 
 import SwiftUI
 import Stripe
+import SDWebImageSwiftUI
 
 struct ConfirmOfferingView: View {
     @Environment(\.presentationMode) var presentationMode
     @ObservedObject var paymentStore : PaymentStore
+    let offering : Offerings
     
     var body: some View {
+        VStack {
+            HStack {
+                //Offering Photo
+                WebImage(url: offering.photo)
+                    .resizable()
+                    .scaledToFit()
+                    .padding(10)
+                VStack {
+                    // Offering Name
+                    Text(offering.name)
+                      .font(.title3)
+                      .fontWeight(.black)
+                    
+                    // Offering Description
+                    Text(offering.description)
+                        .font(.body)
+                        .fontWeight(.black)
+                }
+            }
+            
+            //Offering Price
+            Text(offering.formattedPrice)
+                .fontWeight(.semibold)
+                .foregroundColor(.gray)
+        }.onTapGesture {
+            presentationMode.wrappedValue.dismiss()
+        }
+        
+        
         if let paymentSheet = paymentStore.paymentSheet {
             PaymentSheet.PaymentButton (
                 paymentSheet: paymentSheet,
@@ -41,6 +72,6 @@ struct ConfirmOfferingView: View {
 
 //struct ConfirmOfferingView_Previews: PreviewProvider {
 //    static var previews: some View {
-//        ConfirmOfferingView(paymentStore: PaymentStore)
+//        ConfirmOfferingView(paymentStore: PaymentStore, offering: offering[0])
 //    }
 //}

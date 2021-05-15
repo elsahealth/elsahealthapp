@@ -12,7 +12,7 @@ struct OfferingsView: View {
     @ObservedObject var viewModel = OfferingsViewModel()
     @ObservedObject var paymentStore = PaymentStore()
     @ObservedObject var sessionStore = SessionStore()
-    @State private var showingConfirmOfferingsSheet = false
+    @State private var selectedOffering: Offerings?
     
     func getUser() {
         sessionStore.listen()
@@ -33,16 +33,17 @@ struct OfferingsView: View {
             ScrollView(content: {
                 LazyVGrid(columns: columns, spacing : 15, content: {
                     ForEach(viewModel.offerings, id: \.id) { item in
-                        OfferingsItemView(offering: item)
-                            // When user taps the product that they want, prepare for payment via Stripe
-                            .onTapGesture {
-                                showingConfirmOfferingsSheet.toggle()
-                                performPurchase(offering: item)
-                        }
-                            // when item is tapped, present sheet to confirm and to buy time for the Stripe processing
+                            // When user selects the product that they want, prepare for payment via Stripe
+                        Button(action: {
+                            self.selectedOffering = item
+                            performPurchase(offering: item)
+                        }, label: {
+                            OfferingsItemView(offering: item)
+                        })
+                            // when item is selected, present sheet to confirm and to buy time for the Stripe processing
                             // TODO: add loading bar/wheel
-                        .sheet(isPresented: $showingConfirmOfferingsSheet) {
-                            ConfirmOfferingView(paymentStore: paymentStore)
+                        .sheet(item: self.$selectedOffering) { item in
+                            ConfirmOfferingView(paymentStore: paymentStore, offering: item)
                         }
                     }
                 })
