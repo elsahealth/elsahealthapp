@@ -11,7 +11,6 @@ import FirebaseFirestoreSwift
 
 class OfferingsViewModel : ObservableObject {
     @Published var offerings = [Offerings]()
-    //var db: Firestore!
     
     func fetchData() {
         db?.collection("elsahealth_products").addSnapshotListener { (querySnapshot, error) in

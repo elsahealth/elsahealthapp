@@ -1,5 +1,5 @@
 //
-//  PillReminder.swift
+//  PillReminderView.swift
 //  elsa
 //
 //  Created by Dusan Boskovic on 2021-03-15.
@@ -8,7 +8,7 @@
 import SwiftUI
 import UserNotifications
 
-struct PillReminder: View {
+struct PillReminderView: View {
     @State private var reminderDate = Date()
     @State private var reminderMessage: String = ""
     @State private var isSaved = false
@@ -42,12 +42,14 @@ struct PillReminder: View {
                     Image(systemName: "powersleep")
                     //TODO: Complete the implementation
                     }
+                    .padding()
                 }
                 Button (action: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Action@*/{}/*@END_MENU_TOKEN@*/) {
                     VStack {
                         Text("Music")
                         Image(systemName: "music.note")
                     }
+                    .padding()
                     //TODO: Complete the implementation
                 }
             }
@@ -109,9 +111,9 @@ struct PillReminder: View {
     }
 }
 
-struct PillReminder_Previews: PreviewProvider {
+struct PillReminderView_Previews: PreviewProvider {
     static var previews: some View {
-        PillReminder()
+        PillReminderView()
     }
 }
 

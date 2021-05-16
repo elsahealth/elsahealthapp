@@ -72,7 +72,7 @@ struct HomeView: View {
                     }
                 }
                 Spacer()
-                NavigationLink(destination: PillReminder()) {
+                NavigationLink(destination: PillReminderView()) {
                     Text("Pill Reminder")
                         .padding()
                         .frame(minWidth: 0, maxWidth: .infinity)

@@ -22,7 +22,9 @@
 		F036A7C425E9E0880036D0C5 /* GoogleService-Info 16.31.17.plist in Resources */ = {isa = PBXBuildFile; fileRef = F036A7C325E9E0880036D0C5 /* GoogleService-Info 16.31.17.plist */; };
 		F036A7CB25E9F2A90036D0C5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F036A7CA25E9F2A90036D0C5 /* GoogleService-Info.plist */; };
 		F055CEF0264E25AE00CCC263 /* ConfirmOfferingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F055CEEF264E25AE00CCC263 /* ConfirmOfferingView.swift */; };
-		F06465DE260042A70014A60E /* PillReminder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06465DD260042A70014A60E /* PillReminder.swift */; };
+		F055CEF22651A53500CCC263 /* UserTEMP.swift in Sources */ = {isa = PBXBuildFile; fileRef = F055CEF12651A53500CCC263 /* UserTEMP.swift */; };
+		F055CEF42651A5C700CCC263 /* UserViewModelTEMP.swift in Sources */ = {isa = PBXBuildFile; fileRef = F055CEF32651A5C700CCC263 /* UserViewModelTEMP.swift */; };
+		F06465DE260042A70014A60E /* PillReminderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06465DD260042A70014A60E /* PillReminderView.swift */; };
 		F075553C25E4BE5900BAE510 /* WelcomePageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F075553B25E4BE5800BAE510 /* WelcomePageView.swift */; };
 		F075553F25E4BF0900BAE510 /* LoginPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F075553E25E4BF0900BAE510 /* LoginPageView.swift */; };
 		F08F70B9263640F7003D4AE3 /* OfferingsItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F08F70B8263640F7003D4AE3 /* OfferingsItemView.swift */; };
@@ -57,7 +59,9 @@
 		F036A7C325E9E0880036D0C5 /* GoogleService-Info 16.31.17.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info 16.31.17.plist"; sourceTree = "<group>"; };
 		F036A7CA25E9F2A90036D0C5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F055CEEF264E25AE00CCC263 /* ConfirmOfferingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmOfferingView.swift; sourceTree = "<group>"; };
-		F06465DD260042A70014A60E /* PillReminder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PillReminder.swift; sourceTree = "<group>"; };
+		F055CEF12651A53500CCC263 /* UserTEMP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTEMP.swift; sourceTree = "<group>"; };
+		F055CEF32651A5C700CCC263 /* UserViewModelTEMP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModelTEMP.swift; sourceTree = "<group>"; };
+		F06465DD260042A70014A60E /* PillReminderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PillReminderView.swift; sourceTree = "<group>"; };
 		F075553B25E4BE5800BAE510 /* WelcomePageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomePageView.swift; sourceTree = "<group>"; };
 		F075553E25E4BF0900BAE510 /* LoginPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPageView.swift; sourceTree = "<group>"; };
 		F08F70B8263640F7003D4AE3 /* OfferingsItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferingsItemView.swift; sourceTree = "<group>"; };
@@ -139,7 +143,6 @@
 				F02D00092602BAD600249A38 /* PrescriptionViewYesPreScan.swift */,
 				F02D00132602BD3F00249A38 /* PrescriptionViewYesScan.swift */,
 				F00A6998260D6FF2004F06B7 /* PrescriptionCoordinator.swift */,
-				F06465DD260042A70014A60E /* PillReminder.swift */,
 				F036A7CA25E9F2A90036D0C5 /* GoogleService-Info.plist */,
 				F0B4207C25E1E6C900B1BECA /* Assets.xcassets */,
 				F0B4208125E1E6C900B1BECA /* Info.plist */,
@@ -162,6 +165,7 @@
 			children = (
 				F0E20750262CFCC8003C3E1E /* Offerings.swift */,
 				F01F0EEC261E963400BF278D /* User.swift */,
+				F055CEF12651A53500CCC263 /* UserTEMP.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -177,6 +181,7 @@
 				F02D00062602B03D00249A38 /* OfferingsView.swift */,
 				F055CEEF264E25AE00CCC263 /* ConfirmOfferingView.swift */,
 				F08F70B8263640F7003D4AE3 /* OfferingsItemView.swift */,
+				F06465DD260042A70014A60E /* PillReminderView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -187,6 +192,7 @@
 				F01F0ECD261E079D00BF278D /* PaymentStoreViewModel.swift */,
 				F01F0EE9261E259F00BF278D /* SessionStoreViewModel.swift */,
 				F0E2075C262D134A003C3E1E /* OfferingsViewModel.swift */,
+				F055CEF32651A5C700CCC263 /* UserViewModelTEMP.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -335,6 +341,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F055CEF42651A5C700CCC263 /* UserViewModelTEMP.swift in Sources */,
 				F036A7C125E6034C0036D0C5 /* LoginSignUpHelper.swift in Sources */,
 				F075553F25E4BF0900BAE510 /* LoginPageView.swift in Sources */,
 				F075553C25E4BE5900BAE510 /* WelcomePageView.swift in Sources */,
@@ -344,7 +351,7 @@
 				F0E2075D262D134A003C3E1E /* OfferingsViewModel.swift in Sources */,
 				F02D00072602B03D00249A38 /* OfferingsView.swift in Sources */,
 				F08F70C026364496003D4AE3 /* CodableBundleExtension.swift in Sources */,
-				F06465DE260042A70014A60E /* PillReminder.swift in Sources */,
+				F06465DE260042A70014A60E /* PillReminderView.swift in Sources */,
 				F01F0ECE261E079D00BF278D /* PaymentStoreViewModel.swift in Sources */,
 				F0B4207925E1E6C600B1BECA /* elsaApp.swift in Sources */,
 				F0E20759262D108B003C3E1E /* Constants.swift in Sources */,
@@ -357,6 +364,7 @@
 				F055CEF0264E25AE00CCC263 /* ConfirmOfferingView.swift in Sources */,
 				F0E20751262CFCC8003C3E1E /* Offerings.swift in Sources */,
 				F00A6999260D6FF2004F06B7 /* PrescriptionCoordinator.swift in Sources */,
+				F055CEF22651A53500CCC263 /* UserTEMP.swift in Sources */,
 				F01F0EED261E963400BF278D /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
