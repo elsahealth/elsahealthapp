@@ -10,8 +10,8 @@ import Stripe
 
 struct OfferingsView: View {
     @ObservedObject var viewModel = OfferingsViewModel()
-    @ObservedObject var paymentStore = PaymentStore()
-    @ObservedObject var sessionStore = SessionStore()
+    @ObservedObject var paymentStore = PaymentStoreViewModel()
+    @ObservedObject var sessionStore = SessionStoreViewModel()
     @State private var selectedOffering: Offerings?
     
     func getUser() {

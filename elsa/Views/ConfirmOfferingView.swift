@@ -11,7 +11,7 @@ import SDWebImageSwiftUI
 
 struct ConfirmOfferingView: View {
     @Environment(\.presentationMode) var presentationMode
-    @ObservedObject var paymentStore : PaymentStore
+    @ObservedObject var paymentStore : PaymentStoreViewModel
     let offering : Offerings
     
     var body: some View {

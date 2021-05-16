@@ -1,5 +1,5 @@
 //
-//  PaymentStore.swift
+//  PaymentStoreViewModel.swift
 //  elsa
 //
 //  Created by Dusan Boskovic on 2021-04-07.
@@ -9,7 +9,7 @@ import Firebase
 import Stripe
 import Foundation
 
-class PaymentStore: ObservableObject {
+class PaymentStoreViewModel: ObservableObject {
     @Published var paymentSheet: PaymentSheet?
     @Published var paymentResult: PaymentResult?
     @Published var isLoading = false

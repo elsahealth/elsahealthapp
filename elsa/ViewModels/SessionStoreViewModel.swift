@@ -1,5 +1,5 @@
 //
-//  SessionStore.swift
+//  SessionStoreViewModel.swift
 //  elsa
 //
 //  Created by Dusan Boskovic on 2021-04-07.
@@ -8,7 +8,7 @@
 import Foundation
 import Firebase
 
-class SessionStore : ObservableObject {
+class SessionStoreViewModel : ObservableObject {
     @Published var user: User?
     @Published var isLoggedin = false
     @Published private var emailReset: String = ""

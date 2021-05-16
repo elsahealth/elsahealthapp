@@ -10,7 +10,7 @@ import Firebase
 
 struct LoginPageView : View {
     //@ObservedObject var model = ModelData()
-    @ObservedObject var sessionStore = SessionStore()
+    @ObservedObject var sessionStore = SessionStoreViewModel()
     
     @State var email: String = ""
     @State var password: String = ""
