@@ -11,18 +11,20 @@ import SwiftUI
  TODO: fix the navigation when going to the sign up page from the login page vs the home page
  not the same look. coming from the home page i have a "Back" buttom, while coming from the log in page
  is more like a pop-up. UNIFY
- 
+
  */
 
 struct SignUpView: View {
-    //@ObservedObject var model = ModelData()
-    @ObservedObject var sessionStore = SessionStoreViewModel()
+    @ObservedObject var userVM = UserProfileViewModel()
+    @State var profile: UserProfile?
     
     @State var email: String = ""
+    @State var firstName: String = ""
+    @State var lastName: String = ""
     @State var password: String = ""
     @State var passwordReEnter: String = ""
     @State var isSignedUp: Bool = false
-    @State var error: Bool = false
+    //@State var error: Bool = false
     
     var body : some View {
         ZStack {
@@ -39,6 +41,10 @@ struct SignUpView: View {
                 Text("OR LOG IN WITH EMAIL")
                 
                 VStack() {
+                    CustomTextField(placeHolder: "First Name", txt: $firstName)
+                    
+                    CustomTextField(placeHolder: "Last Name", txt: $lastName)
+                    
                     CustomTextField(placeHolder: "Email", txt: $email)
                     
                     CustomTextField(placeHolder: "Password", txt: $password)
@@ -57,15 +63,8 @@ struct SignUpView: View {
                 NavigationLink(destination: LoginPageView(), isActive: $isSignedUp) {
                     EmptyView() }
                 Button {
-                    self.error = false
-                    sessionStore.signUp(email: email, password: password, reenterPassword: passwordReEnter) { (result, error) in
-                        if error != nil {
-                            self.error = true
-                        } else {
-                            self.isSignedUp = true
-                            self.password = ""
-                        }
-                    }
+                    //self.error = false
+                    self.signUp()
                 } label: {
                     Text("GET STARTED")
                         .fontWeight(.bold)
@@ -92,6 +91,17 @@ struct SignUpView: View {
 //                }
 //            }))
 //        })
+        
+    }
+    func signUp() {
+        userVM.signUp(firstName: firstName, lastName: lastName, email: email, password: password, reenterPassword: passwordReEnter) { (profile, error) in
+            if let error = error {
+                print("Error signing up: \(error)")
+                return
+            }
+            self.profile = profile
+            self.isSignedUp = true
+        }
     }
 }
 

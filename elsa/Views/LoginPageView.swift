@@ -9,13 +9,13 @@ import SwiftUI
 import Firebase
 
 struct LoginPageView : View {
-    //@ObservedObject var model = ModelData()
-    @ObservedObject var sessionStore = SessionStoreViewModel()
+    @ObservedObject var userVM = UserProfileViewModel()
+    @State var profile: UserProfile?
     
     @State var email: String = ""
     @State var password: String = ""
-    @State var loading: Bool = false
-    @State var error: Bool = false
+    //@State var loading: Bool = false
+    //@State var error: Bool = false
     @State private var isLoggedIn: Bool = false
     
 
@@ -49,17 +49,8 @@ struct LoginPageView : View {
             NavigationLink(destination: WelcomePageView(), isActive: $isLoggedIn) {
                 EmptyView() }
             Button {
-                loading = true
-                error = false
-                sessionStore.login(email: email, password: password) { (result, error) in
-                    self.loading = false
-                    if error != nil {
-                        self.error = true
-                    } else {
-                        self.isLoggedIn = true
-                        self.password = ""
-                    }
-                }
+                //error = false
+                self.login()
             } label: {
                 Text("LOG IN")
                     .fontWeight(.bold)
@@ -75,7 +66,7 @@ struct LoginPageView : View {
             .padding(.top, 22)
             
             
-            Button(action: sessionStore.resetPassword){
+            Button(action: userVM.resetPassword){
                 Text("Forgot Password?")
                     .fontWeight(.bold)
                 
@@ -97,11 +88,22 @@ struct LoginPageView : View {
 //        .fullScreenCover(isPresented: $model.isSignedUp) {
 //            SignUpView()
 //        }
-        .alert(isPresented: $sessionStore.isLinkEmailSent) {
+        .alert(isPresented: $userVM.isLinkEmailSent) {
             Alert(title: Text("Message"), message: Text("The password reset link has been sent"), dismissButton: .destructive(Text("Ok")))
             //TODO: add a check to see if this is a valid address
         }
     }
+    func login() {
+        userVM.login(email: email, password: password) { (profile, error) in
+            if let error = error {
+                print("Error logging in: \(error)")
+                return
+            }
+            self.profile = profile
+            self.isLoggedIn = true
+        }
+    }
+
 }
 
 struct LoginPageView_Previews: PreviewProvider {

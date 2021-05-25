@@ -11,9 +11,10 @@ import FirebaseFirestoreSwift
 
 class OfferingsViewModel : ObservableObject {
     @Published var offerings = [Offerings]()
+    private let db = Firestore.firestore()
     
     func fetchData() {
-        db?.collection("elsahealth_products").addSnapshotListener { (querySnapshot, error) in
+        db.collection("elsahealth_products").addSnapshotListener { (querySnapshot, error) in
             guard let documents = querySnapshot?.documents else {
                 print("No documents in the server found")
                 return

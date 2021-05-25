@@ -20,9 +20,10 @@ const stripe = require('stripe')(functions.config().stripe.secret, {
     metadata: { firebaseUID: user.uid },
   });
 
-  await admin.firestore().collection('stripe_customers').doc(user.uid).set({
+  await admin.firestore().collection('users').doc(user.uid).set({
     customer_id: customer.id,
-  });
+  }, 
+  {merge:true});
   return;
 });
 
@@ -46,7 +47,7 @@ exports.createEphemeralKey = functions.https.onCall(async (data, context) => {
     if (!uid) throw new Error('Not authenticated!');
     // Get stripe customer id
     const customer = (
-      await admin.firestore().collection('stripe_customers').doc(uid).get()
+      await admin.firestore().collection('users').doc(uid).get()
     ).data().customer_id;
     const key = await stripe.ephemeralKeys.create(
       { customer },
@@ -65,7 +66,7 @@ exports.createEphemeralKey = functions.https.onCall(async (data, context) => {
  * @see https://stripe.com/docs/mobile/android/basic#complete-the-payment
  */
 exports.createStripePayment = functions.firestore
-  .document('stripe_customers/{userId}/payments/{pushId}')
+  .document('users/{userId}/payments/{pushId}')
   .onCreate(async (snap, context) => {
     const { amount, currency } = snap.data();
     try {
@@ -155,6 +156,7 @@ exports.handleWebhookEvents = functions.https.onRequest(async (req, resp) => {
   resp.json({ received: true });
 });
 
+//HAS NOT BEEN IMPLEMENTED YET
 /**
  * When a user deletes their account, clean up after them.
  */

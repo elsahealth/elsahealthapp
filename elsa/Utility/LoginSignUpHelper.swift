@@ -16,9 +16,13 @@ struct CustomTextField : View {
             ZStack {
                 if placeHolder == "Password" || placeHolder == "Re-Enter Password" {
                     SecureField(placeHolder, text: $txt)
+                } else if placeHolder == "Email" {
+                    TextField(placeHolder, text: $txt)
+                        .textContentType(.emailAddress)
+                        .autocapitalization(.none)
+                        .disableAutocorrection(true)
                 } else {
                     TextField(placeHolder, text: $txt)
-                        .autocapitalization(.none)
                         .disableAutocorrection(true)
                 }
             }

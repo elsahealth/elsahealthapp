@@ -13,6 +13,7 @@ class PaymentStoreViewModel: ObservableObject {
     @Published var paymentSheet: PaymentSheet?
     @Published var paymentResult: PaymentResult?
     @Published var isLoading = false
+    private let db = Firestore.firestore()
     
     func preparePayment(uid: String, amount: Double, currency: String) {
         self.paymentSheet = nil
@@ -21,7 +22,7 @@ class PaymentStoreViewModel: ObservableObject {
         
         // Add new document with a generated ID
         var ref: DocumentReference? = nil
-        ref = db!.collection("stripe_customers").document(uid).collection("payments").addDocument(data: [
+        ref = db.collection("users").document(uid).collection("payments").addDocument(data: [
             "currency": currency,
             "amount": amount
         ]) { err in
