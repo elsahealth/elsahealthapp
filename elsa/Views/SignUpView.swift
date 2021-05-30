@@ -16,7 +16,7 @@ import SwiftUI
 
 struct SignUpView: View {
     @ObservedObject var userVM = UserProfileViewModel()
-    @State var profile: UserProfile?
+    @EnvironmentObject var userProfileWrapper : UserProfileWrapper
     
     @State var email: String = ""
     @State var firstName: String = ""
@@ -99,8 +99,9 @@ struct SignUpView: View {
                 print("Error signing up: \(error)")
                 return
             }
-            self.profile = profile
-            self.isSignedUp = true
+            // TODO: test the signing up now using the @EnvironmentObject
+            self.isSignedUp.toggle()
+            self.userProfileWrapper.userProfile = profile
         }
     }
 }

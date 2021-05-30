@@ -7,10 +7,9 @@
 
 import Foundation
 import Firebase
-//import SwiftUI
+import SwiftUI
 
 class UserProfileViewModel : ObservableObject {
-    @Published var userProfile : UserProfile?
     private var userRepo = UserRepository()
     @Published var isLinkEmailSent: Bool = false
     @Published private var emailReset: String = ""
@@ -32,7 +31,7 @@ class UserProfileViewModel : ObservableObject {
             
             guard let user = result?.user else { return }
             print("User \(user.uid) signed up")
-             
+            // Create variable so that we can pass the UserProfile struct to Firestore
             let userProfile = UserProfile(uid: user.uid, firstName: firstName, lastName: lastName, email: email)
             
             // Save profile information to Firestore
@@ -42,7 +41,8 @@ class UserProfileViewModel : ObservableObject {
                     completion(nil, error)
                     return
                 }
-                self.userProfile = profile
+                //self.userProfile = profile
+                print("sign up \(userProfile)")
                 completion(profile, nil)
             }
         }
@@ -65,7 +65,6 @@ class UserProfileViewModel : ObservableObject {
                     completion(nil, error)
                     return
                 }
-                self.userProfile = profile
                 completion(profile, nil)
             }
         }
@@ -74,27 +73,13 @@ class UserProfileViewModel : ObservableObject {
     func logout () {
         do {
             try Auth.auth().signOut()
-            self.userProfile = nil
+            // Needs to be implemented when logging out (in the logout view? idk)
+//            self.userProfileWrapper.userProfile?.uid = ""
+//            self.userProfileWrapper.userProfile?.firstName = ""
+//            self.userProfileWrapper.userProfile?.lastName = ""
+//            self.userProfileWrapper.userProfile?.email = ""
         } catch let signOutError as NSError {
             print("Error signing out: %@", signOutError)
-        }
-    }
-    
-    func fetchProfile(completion: @escaping (_ profile: UserProfile?, _ error: Error?) -> Void) {
-        let currentUser = Auth.auth().currentUser
-        if currentUser != nil {
-            userRepo.fetchProfile(userId: currentUser!.uid) { (profile, error) in
-                if let error = error {
-                    print("Error signing in - \(error)")
-                    completion(nil, error)
-                    return
-                }
-                self.userProfile = profile
-                print("called from payment store: \(self.userProfile!)")
-                completion(profile, nil)
-            }
-        } else {
-            print("No user is signed in...")
         }
     }
     

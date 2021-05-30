@@ -6,11 +6,14 @@
 //
 
 import Foundation
-import FirebaseFirestoreSwift
+
+class UserProfileWrapper : ObservableObject {
+    @Published var userProfile : UserProfile?
+}
 
 struct UserProfile : Codable {
-    var uid: String
-    var firstName : String
-    var lastName : String
-    var email : String
+    var uid: String = ""
+    var firstName : String = ""
+    var lastName : String = ""
+    var email : String = ""
 }

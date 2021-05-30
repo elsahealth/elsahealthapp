@@ -12,28 +12,17 @@ struct OfferingsView: View {
     @ObservedObject var viewModel = OfferingsViewModel()
     @ObservedObject var paymentStore = PaymentStoreViewModel()
     @ObservedObject var userVM = UserProfileViewModel()
+    @EnvironmentObject var userProfileWrapper : UserProfileWrapper
     @State private var selectedOffering: Offerings?
-    @State var userProfile: UserProfile?
     
     func performPurchase(offering: Offerings) {
-        if self.userProfile != nil {
+        print("Offerings view: \(self.userProfileWrapper.userProfile!)")
+        if self.userProfileWrapper.userProfile != nil {
             paymentStore.isLoading = true
-            paymentStore.preparePayment(uid: self.userProfile!.uid, amount: offering.price, currency: "cad")
+            paymentStore.preparePayment(uid: self.userProfileWrapper.userProfile!.uid, amount: offering.price, currency: "cad")
             paymentStore.isLoading.toggle()
         } else {
             print("You are not logged in") //add timer or something
-        }
-    }
-    // TODO: there is a better way to do this. Figure out how to save the current logged in user from the login function in the uservm.
-    // Look into the @EnviornmentState thing
-    // this function is needed here to get the profile available in this view
-    func fetchProfile() {
-        userVM.fetchProfile() { (profile, error) in
-            if let error = error {
-                print("Error logging in: \(error)")
-                return
-            }
-            self.userProfile = profile
         }
     }
     
@@ -59,15 +48,14 @@ struct OfferingsView: View {
             })
         }.onAppear() {
             self.viewModel.fetchData()
-            self.fetchProfile()
         }
     }
 }
 
 
 
-//struct OfferingsView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        OfferingsView(offering: Offerings)
-//    }
-//}
+struct OfferingsView_Previews: PreviewProvider {
+    static var previews: some View {
+        OfferingsView()
+    }
+}

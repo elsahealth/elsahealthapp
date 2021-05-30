@@ -10,13 +10,11 @@ import Firebase
 
 struct LoginPageView : View {
     @ObservedObject var userVM = UserProfileViewModel()
-    @State var profile: UserProfile?
+    @EnvironmentObject var userProfileWrapper : UserProfileWrapper
     
     @State var email: String = ""
     @State var password: String = ""
-    //@State var loading: Bool = false
-    //@State var error: Bool = false
-    @State private var isLoggedIn: Bool = false
+    @State var isLoggedIn: Bool = false
     
 
     // TODO: add error/warning when login isn't valid
@@ -51,6 +49,9 @@ struct LoginPageView : View {
             Button {
                 //error = false
                 self.login()
+                //print("login view button: \(self.userProfileWrapper.userProfile!)")
+                // TODO: why is this printing false when logged in? DOes it toggle back??
+                print("logging in or not: \(isLoggedIn)")
             } label: {
                 Text("LOG IN")
                     .fontWeight(.bold)
@@ -64,7 +65,6 @@ struct LoginPageView : View {
 //                Alert(title: Text("Message"), message: Text("Please input the fields properly"), dismissButton: .destructive(Text("Ok")))
 //            }
             .padding(.top, 22)
-            
             
             Button(action: userVM.resetPassword){
                 Text("Forgot Password?")
@@ -99,8 +99,10 @@ struct LoginPageView : View {
                 print("Error logging in: \(error)")
                 return
             }
-            self.profile = profile
-            self.isLoggedIn = true
+            self.isLoggedIn.toggle()
+            // This is where the userProfile struct will be constructed for most instances
+            self.userProfileWrapper.userProfile = profile!
+            print("login view: \(self.userProfileWrapper.userProfile!)")
         }
     }
 
