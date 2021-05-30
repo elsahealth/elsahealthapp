@@ -47,9 +47,7 @@ struct LoginPageView : View {
             NavigationLink(destination: WelcomePageView(), isActive: $isLoggedIn) {
                 EmptyView() }
             Button {
-                //error = false
                 self.login()
-                //print("login view button: \(self.userProfileWrapper.userProfile!)")
                 // TODO: why is this printing false when logged in? DOes it toggle back??
                 print("logging in or not: \(isLoggedIn)")
             } label: {

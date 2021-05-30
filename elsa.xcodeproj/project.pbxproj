@@ -11,6 +11,7 @@
 		F00A6999260D6FF2004F06B7 /* PrescriptionCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00A6998260D6FF2004F06B7 /* PrescriptionCoordinator.swift */; };
 		F015B6D725F33F4E00B20774 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F015B6D625F33F4E00B20774 /* HomeView.swift */; };
 		F01F0ECE261E079D00BF278D /* PaymentStoreViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01F0ECD261E079D00BF278D /* PaymentStoreViewModel.swift */; };
+		F020151B2664369D00DA90E0 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F020151A2664369D00DA90E0 /* ProfileView.swift */; };
 		F02D00042602AF0000249A38 /* PrescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02D00032602AF0000249A38 /* PrescriptionView.swift */; };
 		F02D00072602B03D00249A38 /* OfferingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02D00062602B03D00249A38 /* OfferingsView.swift */; };
 		F02D000A2602BAD600249A38 /* PrescriptionViewYesPreScan.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02D00092602BAD600249A38 /* PrescriptionViewYesPreScan.swift */; };
@@ -47,6 +48,7 @@
 		F00A6998260D6FF2004F06B7 /* PrescriptionCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrescriptionCoordinator.swift; sourceTree = "<group>"; };
 		F015B6D625F33F4E00B20774 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		F01F0ECD261E079D00BF278D /* PaymentStoreViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentStoreViewModel.swift; sourceTree = "<group>"; };
+		F020151A2664369D00DA90E0 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		F02D00032602AF0000249A38 /* PrescriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrescriptionView.swift; sourceTree = "<group>"; };
 		F02D00062602B03D00249A38 /* OfferingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferingsView.swift; sourceTree = "<group>"; };
 		F02D00092602BAD600249A38 /* PrescriptionViewYesPreScan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrescriptionViewYesPreScan.swift; sourceTree = "<group>"; };
@@ -184,6 +186,7 @@
 				F075553E25E4BF0900BAE510 /* LoginPageView.swift */,
 				F075553B25E4BE5800BAE510 /* WelcomePageView.swift */,
 				F015B6D625F33F4E00B20774 /* HomeView.swift */,
+				F020151A2664369D00DA90E0 /* ProfileView.swift */,
 				F02D00062602B03D00249A38 /* OfferingsView.swift */,
 				F055CEEF264E25AE00CCC263 /* ConfirmOfferingView.swift */,
 				F08F70B8263640F7003D4AE3 /* OfferingsItemView.swift */,
@@ -353,6 +356,7 @@
 				F075553C25E4BE5900BAE510 /* WelcomePageView.swift in Sources */,
 				F0B4208925E1E72700B1BECA /* SignUpView.swift in Sources */,
 				F02D00042602AF0000249A38 /* PrescriptionView.swift in Sources */,
+				F020151B2664369D00DA90E0 /* ProfileView.swift in Sources */,
 				F0B4207B25E1E6C600B1BECA /* StartPageView.swift in Sources */,
 				F0E2075D262D134A003C3E1E /* OfferingsViewModel.swift in Sources */,
 				F02D00072602B03D00249A38 /* OfferingsView.swift in Sources */,

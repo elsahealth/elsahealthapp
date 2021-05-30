@@ -8,13 +8,15 @@
 import SwiftUI
 
 struct WelcomePageView: View {
+    @EnvironmentObject var userProfileWrapper : UserProfileWrapper
+    
     var body: some View {
         ZStack{
             Color("welcomePageBackground")
                 .ignoresSafeArea()
             // make the name change depending on the user
             VStack{
-                Text("Hello Emy, ")
+                Text("Hello \(self.userProfileWrapper.userProfile!.firstName)")
                 Text("Welcome to elsa")
                 Text("Learn more about elsa")
                 Text("Start your birth control experience")

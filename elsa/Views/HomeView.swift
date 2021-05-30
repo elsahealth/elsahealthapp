@@ -8,13 +8,26 @@
 import SwiftUI
 
 struct HomeView: View {
+    @EnvironmentObject var userProfileWrapper : UserProfileWrapper
+    
     var body: some View {
         ScrollView(content: {
             VStack {
-                // TODO: insert profile button on the top right corner
-                // figure out how to change the name
-                Text("Good morning, Emy")
-                Text("How can elsa help you today?")
+                HStack {
+                    Text("Good morning, \(self.userProfileWrapper.userProfile!.firstName) \n How can elsa help you today?")
+                    // TODO: Change the photo to match user
+                    NavigationLink(
+                        destination: ProfileView(),
+                        label: {
+                            Image("prescriptionYesScanQRcode")
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .frame(width: 50)
+                                .clipShape(Circle())
+                                .overlay(Circle().stroke(Color("elsaBlue1"), lineWidth: 2))
+                        })
+                    }
+
                 HStack {
                     ZStack {
                         RoundedRectangle(cornerRadius: 25)
@@ -109,5 +122,6 @@ struct HomeView: View {
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
             HomeView()
+                .environmentObject(UserProfileWrapper())
     }
 }
